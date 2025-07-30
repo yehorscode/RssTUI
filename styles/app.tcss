@@ -1,6 +1,5 @@
 #main-content {
     background: $surface;
-    padding: 1;
 }
 
 #main-content Static {
@@ -23,10 +22,13 @@
     align: center top;
 }
 
-#main-area {
+#feed-display,
+#add-feed-display,
+#manage-display {
    background: #FF8200;
    color: black;
    border-left: solid black;
+   padding: 0 1 0 1;
 }
 
 .sidebar-title {
@@ -48,7 +50,25 @@
 }
 
 .title-button {
-    margin: 1;
+    background: transparent;
+    color: black;
+    border: solid black;
+}
+
+.feed-info {
+    border: panel black;
+    padding: 1;
+    width: 20;
+}
+.feed-instruction {
+    border: panel black;
+    padding: 1;
+    width: 20;
+}
+
+.feed-info-container {
+    margin-bottom: 0;
+    height: 8;
 }
 
 .add-feed {
@@ -65,3 +85,28 @@
     width: 100%;
     color: black;
 }
+
+.back-button {
+    background: transparent;
+    border: solid black;
+    color: black;
+}
+
+.articles-list {
+    height: 100%;
+    overflow-y: auto;
+}
+
+#dynamic-content {
+    height: 100%;
+}
+
+VerticalScroll {
+  scrollbar-size: 1 1;
+  scrollbar-background: black;
+  scrollbar-color: #ffa13dff;
+  scrollbar-corner-color: yellow;
+  scrollbar-background-hover: black;
+  scrollbar-color-hover: #ffc400ff;
+}
+

@@ -2,12 +2,12 @@
     "bozo": false,
     "entries": [
         {
-            "title": "Live Updates: Higher Waves Reach California After Major Pacific Quake",
+            "title": "Tsunami Alerts Are Mostly Lifted After Major Pacific Quake",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Live Updates: Higher Waves Reach California After Major Pacific Quake"
+                "value": "Tsunami Alerts Are Mostly Lifted After Major Pacific Quake"
             },
             "links": [
                 {
@@ -24,12 +24,12 @@
             "link": "https://www.nytimes.com/live/2025/07/29/world/earthquake-tsunami-russia-japan-hawaii",
             "id": "https://www.nytimes.com/live/2025/07/29/world/earthquake-tsunami-russia-japan-hawaii",
             "guidislink": false,
-            "summary": "Countries on both sides of the Pacific issued tsunami warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained under advisories.",
+            "summary": "Officials from Japan to California issued warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained on alert.",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Countries on both sides of the Pacific issued tsunami warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained under advisories."
+                "value": "Officials from Japan to California issued warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained on alert."
             },
             "authors": [
                 {
@@ -40,14 +40,14 @@
             "author_detail": {
                 "name": "The New York Times"
             },
-            "published": "Wed, 30 Jul 2025 13:06:00 +0000",
+            "published": "Wed, 30 Jul 2025 15:33:38 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                13,
-                6,
-                0,
+                15,
+                33,
+                38,
                 2,
                 211,
                 0
@@ -68,12 +68,12 @@
             "credit": "Michelle Bir/Associated Press"
         },
         {
-            "title": "A Corner of \u2018Fake Peace\u2019 in Gaza, Torn Apart by an Israeli Strike",
+            "title": "A Seaside Refuge in Gaza, Torn Apart by an Israeli Strike",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "A Corner of \u2018Fake Peace\u2019 in Gaza, Torn Apart by an Israeli Strike"
+                "value": "A Seaside Refuge in Gaza, Torn Apart by an Israeli Strike"
             },
             "links": [
                 {
@@ -106,14 +106,14 @@
             "author_detail": {
                 "name": "Bilal Shbair, Vivian Yee, Iyad Abuheweila, Ameera Harouda and Saher Alghorra"
             },
-            "published": "Wed, 30 Jul 2025 09:08:55 +0000",
+            "published": "Wed, 30 Jul 2025 13:24:25 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                9,
-                8,
-                55,
+                13,
+                24,
+                25,
                 2,
                 211,
                 0
@@ -212,14 +212,14 @@
             "author_detail": {
                 "name": "Jack Nicas and Victor Moriyama"
             },
-            "published": "Wed, 30 Jul 2025 13:18:30 +0000",
+            "published": "Wed, 30 Jul 2025 14:45:43 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                13,
-                18,
-                30,
+                14,
+                45,
+                43,
                 2,
                 211,
                 0
@@ -446,6 +446,97 @@
             ]
         },
         {
+            "title": "Powerful Earthquake Rattles Russia\u2019s Far East But Causes Little Damage",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Powerful Earthquake Rattles Russia\u2019s Far East But Causes Little Damage"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/russia-earthquake-kamchatka.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/russia-earthquake-kamchatka.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/07/30/world/europe/russia-earthquake-kamchatka.html",
+            "id": "https://www.nytimes.com/2025/07/30/world/europe/russia-earthquake-kamchatka.html",
+            "guidislink": false,
+            "summary": "A 8.8-magnitude earthquake shook the remote, sparsely populated Kamchatka region and set off tsunami waves. No serious injuries were reported, officials said.",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "A 8.8-magnitude earthquake shook the remote, sparsely populated Kamchatka region and set off tsunami waves. No serious injuries were reported, officials said."
+            },
+            "authors": [
+                {
+                    "name": "Ivan Nechepurenko and Nataliya Vasilyeva"
+                }
+            ],
+            "author": "Ivan Nechepurenko and Nataliya Vasilyeva",
+            "author_detail": {
+                "name": "Ivan Nechepurenko and Nataliya Vasilyeva"
+            },
+            "published": "Wed, 30 Jul 2025 15:31:32 +0000",
+            "published_parsed": [
+                2025,
+                7,
+                30,
+                15,
+                31,
+                32,
+                2,
+                211,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Kamchatka Peninsula (Russia)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Kurile Islands",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1799",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/07/30/multimedia/30int-russia-quake-01-ztfp/30int-russia-quake-01-ztfp-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "Geophysical Survey of the Russian Academy of Sciences, via Reuters"
+                }
+            ],
+            "credit": "Geophysical Survey of the Russian Academy of Sciences, via Reuters",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "In this handout photo, tsunami waves flood an area after an earthquake struck off Russia\u2019s Kamchatka Peninsula on Wednesday."
+                }
+            ]
+        },
+        {
             "title": "Trump Administration Told Taiwan\u2019s President to Avoid U.S. Stopover",
             "title_detail": {
                 "type": "text/plain",
@@ -598,6 +689,142 @@
                     "language": null,
                     "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
                     "value": "President Lai Ching-te of Taiwan in Kaohsiung, Taiwan, last month. He suffered a political setback on Saturday when a recall campaign aimed at removing several opposition lawmakers failed."
+                }
+            ]
+        },
+        {
+            "title": "Pro-Palestinian Protest Group Can Appeal U.K. Ban, Judge Rules",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Pro-Palestinian Protest Group Can Appeal U.K. Ban, Judge Rules"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/palestine-action-uk-ban-terrorist-court.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/palestine-action-uk-ban-terrorist-court.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/07/30/world/europe/palestine-action-uk-ban-terrorist-court.html",
+            "id": "https://www.nytimes.com/2025/07/30/world/europe/palestine-action-uk-ban-terrorist-court.html",
+            "guidislink": false,
+            "summary": "A High Court judge in London said that Palestine Action had the right to challenge the British government\u2019s decision to ban it as a terrorist group.",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "A High Court judge in London said that Palestine Action had the right to challenge the British government\u2019s decision to ban it as a terrorist group."
+            },
+            "authors": [
+                {
+                    "name": "Lizzie Dearden"
+                }
+            ],
+            "author": "Lizzie Dearden",
+            "author_detail": {
+                "name": "Lizzie Dearden"
+            },
+            "published": "Wed, 30 Jul 2025 13:27:25 +0000",
+            "published_parsed": [
+                2025,
+                7,
+                30,
+                13,
+                27,
+                25,
+                2,
+                211,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Terrorism",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Israel-Gaza War (2023- )",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Palestinians",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Freedom of Speech and Expression",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Law and Legislation",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Demonstrations, Protests and Riots",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "War Crimes, Genocide and Crimes Against Humanity",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Palestine Action",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
+                    "label": null
+                },
+                {
+                    "term": "Starmer, Keir",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
+                    "label": null
+                },
+                {
+                    "term": "Gaza Strip",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Great Britain",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "London (England)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1801",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/07/30/multimedia/30int-UK-Palestine-Action-mzgj/30int-UK-Palestine-Action-mzgj-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "Dan Kitwood/Getty Images"
+                }
+            ],
+            "credit": "Dan Kitwood/Getty Images",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "Supporters of the group Palestine Action protesting outside the High Court in London this month."
                 }
             ]
         },
@@ -1404,170 +1631,104 @@
             "credit": "Reuters"
         },
         {
-            "title": "Houthis in Yemen Confirm in Video They Are Holding 11 Mariners Hostage",
+            "title": "Trump\u2019s Mideast Envoy Heads to Israel Amid Global Fury Over Gaza Hunger",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Houthis in Yemen Confirm in Video They Are Holding 11 Mariners Hostage"
+                "value": "Trump\u2019s Mideast Envoy Heads to Israel Amid Global Fury Over Gaza Hunger"
             },
             "links": [
                 {
                     "rel": "alternate",
                     "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html"
+                    "href": "https://www.nytimes.com/2025/07/30/world/middleeast/trump-envoy-israel-gaza.html"
                 },
                 {
-                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
+                    "href": "https://www.nytimes.com/2025/07/30/world/middleeast/trump-envoy-israel-gaza.html",
                     "rel": "standout",
                     "type": "text/html"
                 }
             ],
-            "link": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
-            "id": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
+            "link": "https://www.nytimes.com/2025/07/30/world/middleeast/trump-envoy-israel-gaza.html",
+            "id": "https://www.nytimes.com/2025/07/30/world/middleeast/trump-envoy-israel-gaza.html",
             "guidislink": false,
-            "summary": "The video was the first confirmation of the number of hostages, who had been sailing through the Red Sea on a ship attacked by the Houthis on July 7.",
+            "summary": "It will be the first known visit in months for Steve Witkoff, President Trump\u2019s lead on the cease-fire and hostage talks. Since his last trip, conditions in the enclave have worsened.",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "The video was the first confirmation of the number of hostages, who had been sailing through the Red Sea on a ship attacked by the Houthis on July 7."
+                "value": "It will be the first known visit in months for Steve Witkoff, President Trump\u2019s lead on the cease-fire and hostage talks. Since his last trip, conditions in the enclave have worsened."
             },
             "authors": [
                 {
-                    "name": "Shuaib Almosawa and Vivian Nereim"
+                    "name": "Aaron Boxerman and Maggie Haberman"
                 }
             ],
-            "author": "Shuaib Almosawa and Vivian Nereim",
+            "author": "Aaron Boxerman and Maggie Haberman",
             "author_detail": {
-                "name": "Shuaib Almosawa and Vivian Nereim"
+                "name": "Aaron Boxerman and Maggie Haberman"
             },
-            "published": "Tue, 29 Jul 2025 18:19:10 +0000",
+            "published": "Wed, 30 Jul 2025 15:41:23 +0000",
             "published_parsed": [
                 2025,
                 7,
-                29,
-                18,
-                19,
-                10,
-                1,
-                210,
+                30,
+                15,
+                41,
+                23,
+                2,
+                211,
                 0
             ],
             "tags": [
+                {
+                    "term": "Israel-Gaza War (2023- )",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Peace Process",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Palestinians",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Famine",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
                 {
                     "term": "Kidnapping and Hostages",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
-                    "term": "War and Armed Conflicts",
+                    "term": "Refugees and Displaced Persons",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
-                    "term": "Houthis",
+                    "term": "Civilian Casualties",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Hamas",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
                     "label": null
                 },
                 {
-                    "term": "Yemen",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "term": "Witkoff, Steven",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
                     "label": null
                 },
                 {
-                    "term": "Red Sea",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Israel",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1800",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/29/multimedia/29INT-YEMEN-pgvc/29INT-YEMEN-pgvc-mediumSquareAt3X.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Ansarullah Media Center, via Agence France-Presse \u2014 Getty Images"
-                }
-            ],
-            "credit": "Ansarullah Media Center, via Agence France-Presse \u2014 Getty Images",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "The Ansarullah Media Center, a Houthi group, released a picture purporting to show the cargo ship Eternity C sinking after it was attacked by the Houthis at sea."
-                }
-            ]
-        },
-        {
-            "title": "Israeli Far-Right Minister Promotes Plan for Jewish Resettlement in Gaza",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Israeli Far-Right Minister Promotes Plan for Jewish Resettlement in Gaza"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
-            "id": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
-            "guidislink": false,
-            "summary": "Bezalel Smotrich described Gaza as an \u2018inseparable part\u2019 of Israel, even as the Netherlands announced a ban on him and another hard line Israeli minister.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Bezalel Smotrich described Gaza as an \u2018inseparable part\u2019 of Israel, even as the Netherlands announced a ban on him and another hard line Israeli minister."
-            },
-            "authors": [
-                {
-                    "name": "Isabel Kershner"
-                }
-            ],
-            "author": "Isabel Kershner",
-            "author_detail": {
-                "name": "Isabel Kershner"
-            },
-            "published": "Tue, 29 Jul 2025 14:18:55 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                29,
-                14,
-                18,
-                55,
-                1,
-                210,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "Israeli Settlements",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Smotrich, Bezalel (1980- )",
+                    "term": "Trump, Donald J",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
                     "label": null
                 },
@@ -1582,31 +1743,137 @@
                     "label": null
                 },
                 {
-                    "term": "Israel-Gaza War (2023- )",
+                    "term": "Doha (Qatar)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1800",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/07/30/multimedia/30int-israel-witkoff-cmgl/30int-israel-witkoff-cmgl-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "Doug Mills/The New York Times"
+                }
+            ],
+            "credit": "Doug Mills/The New York Times",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "Steve Witkoff, President Trump\u2019s Mideast envoy, in the Oval Office in May."
+                }
+            ]
+        },
+        {
+            "title": "Departing Flights Are Grounded at London Airports",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Departing Flights Are Grounded at London Airports"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/uk-flights-london-heathrow-airport-grounded.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/07/30/world/europe/uk-flights-london-heathrow-airport-grounded.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/07/30/world/europe/uk-flights-london-heathrow-airport-grounded.html",
+            "id": "https://www.nytimes.com/2025/07/30/world/europe/uk-flights-london-heathrow-airport-grounded.html",
+            "guidislink": false,
+            "summary": "The disruptions came after a company that provides air traffic control services in Britain said it had experienced a \u201ctechnical issue.\u201d",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "The disruptions came after a company that provides air traffic control services in Britain said it had experienced a \u201ctechnical issue.\u201d"
+            },
+            "authors": [
+                {
+                    "name": "Jonathan Wolfe and Michael D. Shear"
+                }
+            ],
+            "author": "Jonathan Wolfe and Michael D. Shear",
+            "author_detail": {
+                "name": "Jonathan Wolfe and Michael D. Shear"
+            },
+            "published": "Wed, 30 Jul 2025 15:38:43 +0000",
+            "published_parsed": [
+                2025,
+                7,
+                30,
+                15,
+                38,
+                43,
+                2,
+                211,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Heathrow Airport (London, England)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
+                    "label": null
+                },
+                {
+                    "term": "Airports",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Airlines and Airplanes",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Great Britain",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "London (England)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Travel and Vacations",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
             ],
             "media_content": [
                 {
-                    "height": "1799",
+                    "height": "1801",
                     "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/29/world/29INT-SMOTRICH-GAZA/29INT-SMOTRICH-GAZA-mediumSquareAt3X.jpg",
+                    "url": "https://static01.nyt.com/images/2025/07/30/multimedia/30xp-heathrow-fthq/30xp-heathrow-fthq-mediumSquareAt3X.jpg",
                     "width": "1800"
                 }
             ],
             "media_credit": [
                 {
-                    "content": "Menahem Kahana/Agence France-Presse \u2014 Getty Images"
+                    "content": "Peter Nicholls/Getty Images"
                 }
             ],
-            "credit": "Menahem Kahana/Agence France-Presse \u2014 Getty Images",
+            "credit": "Peter Nicholls/Getty Images",
             "content": [
                 {
                     "type": "text/plain",
                     "language": null,
                     "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "Bezalel Smotrich, Israel\u2019s finance minister, in the Parliament in Jerusalem last month. He said Tuesday that Israel was \u201ccloser than ever\u201d to rebuilding Jewish settlements in Gaza."
+                    "value": "Departing flights were grounded at Heathrow on Wednesday, months after a fire at a power substation shut down the airport for around 16 hours."
                 }
             ]
         },
@@ -2427,12 +2694,12 @@
             ]
         },
         {
-            "title": "Here\u2019s the latest on the tsunami.",
+            "title": "Here\u2019s the latest.",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Here\u2019s the latest on the tsunami."
+                "value": "Here\u2019s the latest."
             },
             "links": [
                 {
@@ -2465,14 +2732,14 @@
             "author_detail": {
                 "name": "Livia Albeck-Ripka, Francesca Regalado, Martin Fackler, John Keefe, Jesus Jim\u00e9nez, Shawn Hubler and Laurel Rosenhall"
             },
-            "published": "Wed, 30 Jul 2025 13:05:58 +0000",
+            "published": "Wed, 30 Jul 2025 14:31:57 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                13,
-                5,
-                58,
+                14,
+                31,
+                57,
                 2,
                 211,
                 0
@@ -2578,14 +2845,14 @@
             "author_detail": {
                 "name": "Ephrat Livni"
             },
-            "published": "Wed, 30 Jul 2025 08:38:10 +0000",
+            "published": "Wed, 30 Jul 2025 13:28:48 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                8,
-                38,
-                10,
+                13,
+                28,
+                48,
                 2,
                 211,
                 0
@@ -3382,6 +3649,112 @@
             ]
         },
         {
+            "title": "Houthis in Yemen Confirm in Video They Are Holding 11 Mariners Hostage",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Houthis in Yemen Confirm in Video They Are Holding 11 Mariners Hostage"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
+            "id": "https://www.nytimes.com/2025/07/29/world/middleeast/houthis-hostages-video-yemen.html",
+            "guidislink": false,
+            "summary": "The video was the first confirmation of the number of hostages, who had been sailing through the Red Sea on a ship attacked by the Houthis on July 7.",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "The video was the first confirmation of the number of hostages, who had been sailing through the Red Sea on a ship attacked by the Houthis on July 7."
+            },
+            "authors": [
+                {
+                    "name": "Shuaib Almosawa and Vivian Nereim"
+                }
+            ],
+            "author": "Shuaib Almosawa and Vivian Nereim",
+            "author_detail": {
+                "name": "Shuaib Almosawa and Vivian Nereim"
+            },
+            "published": "Tue, 29 Jul 2025 18:19:10 +0000",
+            "published_parsed": [
+                2025,
+                7,
+                29,
+                18,
+                19,
+                10,
+                1,
+                210,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Kidnapping and Hostages",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "War and Armed Conflicts",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Houthis",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
+                    "label": null
+                },
+                {
+                    "term": "Yemen",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Red Sea",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Israel",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1800",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/07/29/multimedia/29INT-YEMEN-pgvc/29INT-YEMEN-pgvc-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "Ansarullah Media Center, via Agence France-Presse \u2014 Getty Images"
+                }
+            ],
+            "credit": "Ansarullah Media Center, via Agence France-Presse \u2014 Getty Images",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "The Ansarullah Media Center, a Houthi group, released a picture purporting to show the cargo ship Eternity C sinking after it was attacked by the Houthis at sea."
+                }
+            ]
+        },
+        {
             "title": "U.S. and China Fail to Reach Immediate Deal to Prolong Trade Truce",
             "title_detail": {
                 "type": "text/plain",
@@ -3615,6 +3988,107 @@
                     "language": null,
                     "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
                     "value": "President Trump and Prime Minister Keir Starmer of Britain in Aberdeen, Scotland, on Monday."
+                }
+            ]
+        },
+        {
+            "title": "Israeli Far-Right Minister Promotes Plan for Jewish Resettlement in Gaza",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Israeli Far-Right Minister Promotes Plan for Jewish Resettlement in Gaza"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
+            "id": "https://www.nytimes.com/2025/07/29/world/middleeast/israel-gaza-jewish-resettlement.html",
+            "guidislink": false,
+            "summary": "Bezalel Smotrich described Gaza as an \u2018inseparable part\u2019 of Israel, even as the Netherlands announced a ban on him and another hard line Israeli minister.",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Bezalel Smotrich described Gaza as an \u2018inseparable part\u2019 of Israel, even as the Netherlands announced a ban on him and another hard line Israeli minister."
+            },
+            "authors": [
+                {
+                    "name": "Isabel Kershner"
+                }
+            ],
+            "author": "Isabel Kershner",
+            "author_detail": {
+                "name": "Isabel Kershner"
+            },
+            "published": "Tue, 29 Jul 2025 14:18:55 +0000",
+            "published_parsed": [
+                2025,
+                7,
+                29,
+                14,
+                18,
+                55,
+                1,
+                210,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Israeli Settlements",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Smotrich, Bezalel (1980- )",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
+                    "label": null
+                },
+                {
+                    "term": "Gaza Strip",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Israel",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Israel-Gaza War (2023- )",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1799",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/07/29/world/29INT-SMOTRICH-GAZA/29INT-SMOTRICH-GAZA-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "Menahem Kahana/Agence France-Presse \u2014 Getty Images"
+                }
+            ],
+            "credit": "Menahem Kahana/Agence France-Presse \u2014 Getty Images",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "Bezalel Smotrich, Israel\u2019s finance minister, in the Parliament in Jerusalem last month. He said Tuesday that Israel was \u201ccloser than ever\u201d to rebuilding Jewish settlements in Gaza."
                 }
             ]
         },
@@ -5941,510 +6415,6 @@
                     "value": "In St. Petersburg, Russia. In a country where smartphones provide the only online access for millions of people, it is a big disruption when mobile networks go dark."
                 }
             ]
-        },
-        {
-            "title": "Europe, Worried by Other Global Crises, Agrees to Trump\u2019s Trade Deal",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Europe, Worried by Other Global Crises, Agrees to Trump\u2019s Trade Deal"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/28/world/europe/europe-trade-deal-trump.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/28/world/europe/europe-trade-deal-trump.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/28/world/europe/europe-trade-deal-trump.html",
-            "id": "https://www.nytimes.com/2025/07/28/world/europe/europe-trade-deal-trump.html",
-            "guidislink": false,
-            "summary": "The framework agreement will likely not do much for economic growth on either side. But it avoids new fissures on other foreign policy issues, particularly the war in Ukraine.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "The framework agreement will likely not do much for economic growth on either side. But it avoids new fissures on other foreign policy issues, particularly the war in Ukraine."
-            },
-            "authors": [
-                {
-                    "name": "Jim Tankersley"
-                }
-            ],
-            "author": "Jim Tankersley",
-            "author_detail": {
-                "name": "Jim Tankersley"
-            },
-            "published": "Mon, 28 Jul 2025 11:56:36 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                28,
-                11,
-                56,
-                36,
-                0,
-                209,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "United States International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "International Trade and World Market",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Customs (Tariff)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Russian Invasion of Ukraine (2022)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Europe",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "United States",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Trump, Donald J",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "European Commission",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
-                    "label": null
-                },
-                {
-                    "term": "European Union",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
-                    "label": null
-                },
-                {
-                    "term": "North Atlantic Treaty Organization",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
-                    "label": null
-                },
-                {
-                    "term": "Russia",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Ukraine",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1800",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/26/multimedia/00int-Europe-trade-assess-hlwk/00int-Europe-trade-assess-hlwk-mediumSquareAt3X.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Robin Van Lonkhuijsen/ANP, via Agence France-Presse \u2014 Getty Images"
-                }
-            ],
-            "credit": "Robin Van Lonkhuijsen/ANP, via Agence France-Presse \u2014 Getty Images",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "A container ship leaving the port of Rotterdam in the Netherlands, this month."
-                }
-            ]
-        },
-        {
-            "title": "Shooting at Bangkok Market Leaves Several People Dead",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Shooting at Bangkok Market Leaves Several People Dead"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/bangkok-shooting-market.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/bangkok-shooting-market.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/28/world/asia/bangkok-shooting-market.html",
-            "id": "https://www.nytimes.com/2025/07/28/world/asia/bangkok-shooting-market.html",
-            "guidislink": false,
-            "summary": "The gunman killed five people at Or Tor Kor market, which is popular with tourists, before dying by suicide, the authorities said.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "The gunman killed five people at Or Tor Kor market, which is popular with tourists, before dying by suicide, the authorities said."
-            },
-            "authors": [
-                {
-                    "name": "Sui-Lee Wee"
-                }
-            ],
-            "author": "Sui-Lee Wee",
-            "author_detail": {
-                "name": "Sui-Lee Wee"
-            },
-            "published": "Mon, 28 Jul 2025 09:19:25 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                28,
-                9,
-                19,
-                25,
-                0,
-                209,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "Bangkok (Thailand)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Mass Shootings",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1800",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/28/multimedia/28int-thailand-shooting-twkg/28int-thailand-shooting-twkg-mediumSquareAt3X.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Mailee Osten-Tan/Getty Images"
-                }
-            ],
-            "credit": "Mailee Osten-Tan/Getty Images",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "Police cordoned off the Or Tor Kor market in Bangkok after the shooting on Monday."
-                }
-            ]
-        },
-        {
-            "title": "\u200bNorth Korea Rejects New South Korean Leader\u2019s Peace Overtures",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "\u200bNorth Korea Rejects New South Korean Leader\u2019s Peace Overtures"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/north-korea-rejects-peace-gestures.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/north-korea-rejects-peace-gestures.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/28/world/asia/north-korea-rejects-peace-gestures.html",
-            "id": "https://www.nytimes.com/2025/07/28/world/asia/north-korea-rejects-peace-gestures.html",
-            "guidislink": false,
-            "summary": "In its first comment on President Lee Jae Myung of South Korea, North Korea dismissed a call for dialogue, dampening hopes of a new chapter in relations.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "In its first comment on President Lee Jae Myung of South Korea, North Korea dismissed a call for dialogue, dampening hopes of a new chapter in relations."
-            },
-            "authors": [
-                {
-                    "name": "Choe Sang-Hun"
-                }
-            ],
-            "author": "Choe Sang-Hun",
-            "author_detail": {
-                "name": "Choe Sang-Hun"
-            },
-            "published": "Mon, 28 Jul 2025 17:41:46 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                28,
-                17,
-                41,
-                46,
-                0,
-                209,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "North Korea",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "South Korea",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "United States International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Nuclear Weapons",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Peace Process",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Kim Jong-un",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Lee Jae-myung",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Trump, Donald J",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Embargoes and Sanctions",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1798",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/28/multimedia/28int-nkorea-wbvj/28int-nkorea-wbvj-mediumSquareAt3X.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Korean Central News Agency, via Agence France-Presse \u2014 Getty Images"
-                }
-            ],
-            "credit": "Korean Central News Agency, via Agence France-Presse \u2014 Getty Images",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "A photograph provided by North Korean state media shows Kim Yo-jong, the sister of North Korea\u2019s leader, Kim Jong-un, speaking in Pyongyang in 2022. North Korea has no interest in pursuing dialogue with the South, she said on Monday."
-                }
-            ]
-        },
-        {
-            "title": "Thailand and Cambodia Agree to Halt Fighting That Has Killed Dozens",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Thailand and Cambodia Agree to Halt Fighting That Has Killed Dozens"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/thailand-cambodia-ceasefire-talks.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/28/world/asia/thailand-cambodia-ceasefire-talks.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/28/world/asia/thailand-cambodia-ceasefire-talks.html",
-            "id": "https://www.nytimes.com/2025/07/28/world/asia/thailand-cambodia-ceasefire-talks.html",
-            "guidislink": false,
-            "summary": "U.S.-backed talks to end the border war, in which militaries have killed dozens of people and displaced hundreds of thousands, began on Monday in Malaysia.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "U.S.-backed talks to end the border war, in which militaries have killed dozens of people and displaced hundreds of thousands, began on Monday in Malaysia."
-            },
-            "authors": [
-                {
-                    "name": "Sui-Lee Wee and Edward Wong"
-                }
-            ],
-            "author": "Sui-Lee Wee and Edward Wong",
-            "author_detail": {
-                "name": "Sui-Lee Wee and Edward Wong"
-            },
-            "published": "Mon, 28 Jul 2025 18:02:45 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                28,
-                18,
-                2,
-                45,
-                0,
-                209,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "War and Armed Conflicts",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Peace Process",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Territorial Disputes",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "United States International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "International Trade and World Market",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Customs (Tariff)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Thailand",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Cambodia",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Malaysia",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "China",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Hun Manet (1977- )",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Phumtham Wechayachai",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Trump, Donald J",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Rubio, Marco",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1800",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/28/multimedia/28int-thailand-cambodia-cfgq/28int-thailand-cambodia-cfgq-mediumSquareAt3X-v2.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Pool photo by Mohd Rasfan"
-                }
-            ],
-            "credit": "Pool photo by Mohd Rasfan",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "Prime Minister Anwar Ibrahim of Malaysia, center, Prime Minister Hun Manet of Cambodia, left, and Thailand\u2019s acting Prime Minister Phumtham Wechayachai, taking part in talks on a possible cease-fire between Thailand and Cambodia, in Malaysia on Monday."
-                }
-            ]
         }
     ],
     "feed": {
@@ -6483,26 +6453,26 @@
             "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
             "value": "Copyright 2025 The New York Times Company"
         },
-        "updated": "Wed, 30 Jul 2025 13:19:45 +0000",
+        "updated": "Wed, 30 Jul 2025 15:45:10 +0000",
         "updated_parsed": [
             2025,
             7,
             30,
-            13,
-            19,
+            15,
             45,
+            10,
             2,
             211,
             0
         ],
-        "published": "Wed, 30 Jul 2025 13:18:30 +0000",
+        "published": "Wed, 30 Jul 2025 15:41:23 +0000",
         "published_parsed": [
             2025,
             7,
             30,
-            13,
-            18,
-            30,
+            15,
+            41,
+            23,
             2,
             211,
             0
@@ -6528,25 +6498,25 @@
     },
     "headers": {
         "connection": "close",
-        "content-length": "17915",
+        "content-length": "17874",
         "access-control-allow-headers": "Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With",
         "access-control-allow-methods": "GET, OPTIONS",
         "access-control-allow-origin": "*",
         "access-control-expose-headers": "Content-Length, X-JSON",
         "cache-control": "public, max-age=300",
         "content-type": "application/xml",
-        "x-envoy-upstream-service-time": "76",
+        "x-envoy-upstream-service-time": "66",
         "server": "envoy",
         "x-envoy-decorator-operation": "du-rss.publishing.nyti.nyt.net:443/*",
         "content-encoding": "gzip",
         "accept-ranges": "bytes",
-        "date": "Wed, 30 Jul 2025 13:21:01 GMT",
+        "date": "Wed, 30 Jul 2025 15:48:47 GMT",
         "via": "1.1 varnish",
-        "age": "76",
-        "x-served-by": "cache-fra-etou8220022-FRA",
+        "age": "216",
+        "x-served-by": "cache-fra-etou8220167-FRA",
         "x-cache": "HIT",
         "x-cache-hits": "2",
-        "x-timer": "S1753881662.999598,VS0,VE0",
+        "x-timer": "S1753890527.101595,VS0,VE0",
         "vary": "Accept-Encoding",
         "strict-transport-security": "max-age=63072000; preload; includeSubdomains"
     },
