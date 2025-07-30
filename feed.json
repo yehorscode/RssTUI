@@ -2,12 +2,12 @@
     "bozo": false,
     "entries": [
         {
-            "title": "Live Updates: Tsunami Waves Reach California as Hawaii Eases Advisory",
+            "title": "Live Updates: Higher Waves Reach California After Major Pacific Quake",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Live Updates: Tsunami Waves Reach California as Hawaii Eases Advisory"
+                "value": "Live Updates: Higher Waves Reach California After Major Pacific Quake"
             },
             "links": [
                 {
@@ -24,12 +24,12 @@
             "link": "https://www.nytimes.com/live/2025/07/29/world/earthquake-tsunami-russia-japan-hawaii",
             "id": "https://www.nytimes.com/live/2025/07/29/world/earthquake-tsunami-russia-japan-hawaii",
             "guidislink": false,
-            "summary": "Officials in Hawaii said the risk of a major tsunami had passed. The first waves began hitting the U.S. West Coast after an 8.8-magnitude quake off Russia\u2019s coast put a swath of Pacific nations on alert.",
+            "summary": "Countries on both sides of the Pacific issued tsunami warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained under advisories.",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Officials in Hawaii said the risk of a major tsunami had passed. The first waves began hitting the U.S. West Coast after an 8.8-magnitude quake off Russia\u2019s coast put a swath of Pacific nations on alert."
+                "value": "Countries on both sides of the Pacific issued tsunami warnings after an 8.8-magnitude quake off Russia\u2019s coast. Hours later, there were no immediate reports of major damage, although some areas remained under advisories."
             },
             "authors": [
                 {
@@ -40,14 +40,14 @@
             "author_detail": {
                 "name": "The New York Times"
             },
-            "published": "Wed, 30 Jul 2025 12:06:03 +0000",
+            "published": "Wed, 30 Jul 2025 13:06:00 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                12,
+                13,
                 6,
-                3,
+                0,
                 2,
                 211,
                 0
@@ -106,14 +106,14 @@
             "author_detail": {
                 "name": "Bilal Shbair, Vivian Yee, Iyad Abuheweila, Ameera Harouda and Saher Alghorra"
             },
-            "published": "Wed, 30 Jul 2025 09:08:54 +0000",
+            "published": "Wed, 30 Jul 2025 09:08:55 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
                 9,
                 8,
-                54,
+                55,
                 2,
                 211,
                 0
@@ -212,14 +212,14 @@
             "author_detail": {
                 "name": "Jack Nicas and Victor Moriyama"
             },
-            "published": "Wed, 30 Jul 2025 10:42:49 +0000",
+            "published": "Wed, 30 Jul 2025 13:18:30 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                10,
-                42,
-                49,
+                13,
+                18,
+                30,
                 2,
                 211,
                 0
@@ -654,6 +654,11 @@
             ],
             "tags": [
                 {
+                    "term": "Great Britain",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
                     "term": "International Relations",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
@@ -689,22 +694,12 @@
                     "label": null
                 },
                 {
-                    "term": "Lammy, David",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
                     "term": "Europe",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
                     "label": null
                 },
                 {
                     "term": "Gaza Strip",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Great Britain",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
                     "label": null
                 },
@@ -716,6 +711,21 @@
                 {
                     "term": "Israel",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Hamas",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
+                    "label": null
+                },
+                {
+                    "term": "Defense and Military Forces",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Terrorism",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
             ],
@@ -795,17 +805,12 @@
             ],
             "tags": [
                 {
-                    "term": "Steroids",
+                    "term": "Running",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
-                    "term": "Doping (Sports)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Workplace Hazards and Violations",
+                    "term": "Marathon Running",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
@@ -815,8 +820,18 @@
                     "label": null
                 },
                 {
-                    "term": "Drug Abuse and Traffic",
+                    "term": "Doping (Sports)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Tests (Drug Use)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Kenya",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
                     "label": null
                 },
                 {
@@ -825,8 +840,8 @@
                     "label": null
                 },
                 {
-                    "term": "Kenya",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "term": "Poverty",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
@@ -836,16 +851,6 @@
                 },
                 {
                     "term": "internal-storyline-no",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Running",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Poverty",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
@@ -923,13 +928,48 @@
                     "label": null
                 },
                 {
+                    "term": "Palestinians",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
                     "term": "Food Aid",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Humanitarian Aid",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Famine",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
                     "term": "Israel-Gaza War (2023- )",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Defense and Military Forces",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Terrorism",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Hamas",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
+                    "label": null
+                },
+                {
+                    "term": "Israel",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
                     "label": null
                 },
                 {
@@ -1712,12 +1752,12 @@
                     "label": null
                 },
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Tidal Waves and Tsunamis",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
                 {
-                    "term": "Tidal Waves and Tsunamis",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
@@ -1914,7 +1954,7 @@
             ],
             "tags": [
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
@@ -2030,7 +2070,7 @@
             ],
             "tags": [
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 },
@@ -2191,7 +2231,7 @@
                     "label": null
                 },
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
@@ -2358,7 +2398,7 @@
                     "label": null
                 },
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
@@ -2425,14 +2465,14 @@
             "author_detail": {
                 "name": "Livia Albeck-Ripka, Francesca Regalado, Martin Fackler, John Keefe, Jesus Jim\u00e9nez, Shawn Hubler and Laurel Rosenhall"
             },
-            "published": "Wed, 30 Jul 2025 11:52:37 +0000",
+            "published": "Wed, 30 Jul 2025 13:05:58 +0000",
             "published_parsed": [
                 2025,
                 7,
                 30,
-                11,
-                52,
-                37,
+                13,
+                5,
+                58,
                 2,
                 211,
                 0
@@ -2479,7 +2519,7 @@
                     "label": null
                 },
                 {
-                    "term": "Russia Earthquake and Tusnami (2025)",
+                    "term": "Russia Earthquake and Pacific Tsunami (2025)",
                     "scheme": "http://www.nytimes.com/namespaces/keywords/des",
                     "label": null
                 }
@@ -6443,26 +6483,26 @@
             "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
             "value": "Copyright 2025 The New York Times Company"
         },
-        "updated": "Wed, 30 Jul 2025 12:14:35 +0000",
+        "updated": "Wed, 30 Jul 2025 13:19:45 +0000",
         "updated_parsed": [
             2025,
             7,
             30,
-            12,
-            14,
-            35,
+            13,
+            19,
+            45,
             2,
             211,
             0
         ],
-        "published": "Wed, 30 Jul 2025 12:06:03 +0000",
+        "published": "Wed, 30 Jul 2025 13:18:30 +0000",
         "published_parsed": [
             2025,
             7,
             30,
-            12,
-            6,
-            3,
+            13,
+            18,
+            30,
             2,
             211,
             0
@@ -6488,25 +6528,25 @@
     },
     "headers": {
         "connection": "close",
-        "content-length": "17878",
+        "content-length": "17915",
         "access-control-allow-headers": "Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With",
         "access-control-allow-methods": "GET, OPTIONS",
         "access-control-allow-origin": "*",
         "access-control-expose-headers": "Content-Length, X-JSON",
         "cache-control": "public, max-age=300",
         "content-type": "application/xml",
-        "x-envoy-upstream-service-time": "68",
+        "x-envoy-upstream-service-time": "76",
         "server": "envoy",
         "x-envoy-decorator-operation": "du-rss.publishing.nyti.nyt.net:443/*",
         "content-encoding": "gzip",
         "accept-ranges": "bytes",
-        "date": "Wed, 30 Jul 2025 12:15:55 GMT",
+        "date": "Wed, 30 Jul 2025 13:21:01 GMT",
         "via": "1.1 varnish",
-        "age": "80",
-        "x-served-by": "cache-fra-etou8220050-FRA",
+        "age": "76",
+        "x-served-by": "cache-fra-etou8220022-FRA",
         "x-cache": "HIT",
-        "x-cache-hits": "1",
-        "x-timer": "S1753877755.430606,VS0,VE2",
+        "x-cache-hits": "2",
+        "x-timer": "S1753881662.999598,VS0,VE0",
         "vary": "Accept-Encoding",
         "strict-transport-security": "max-age=63072000; preload; includeSubdomains"
     },

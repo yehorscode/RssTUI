@@ -7,6 +7,13 @@
     background: transparent;
 }
 
+#header {
+    background: #FF8200;
+    color: black;
+    border-bottom: solid black;
+    height: 2;
+}
+
 #sidebar {
     dock: left;
     width: 20;
@@ -14,6 +21,12 @@
     color: white;
     background: #FF8200;
     align: center top;
+}
+
+#main-area {
+   background: #FF8200;
+   color: black;
+   border-left: solid black;
 }
 
 .sidebar-title {
@@ -24,11 +37,31 @@
 
 .feed {
     height: 3;
-    background: black;
+    background: transparent;
     width: 100%;
-    color: #FF8200;
+    color: black;
 }
 
 #feed-content {
     padding: 1;
+    background: #FF8200;
+}
+
+.title-button {
+    margin: 1;
+}
+
+.add-feed {
+    height: 3;
+    background: transparent;
+    width: 100%;
+    color: black;
+    margin-top: 2;
+}
+
+.manage-feeds {
+    height: 3;
+    background: transparent;
+    width: 100%;
+    color: black;
 }

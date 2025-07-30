@@ -30,6 +30,9 @@ class Sidebar(Vertical):
         for i, feed in enumerate(self.feed_titles):
             self.feed_buttons.append(feed)
             yield Button(feed, id=f"feed-{i}", classes="feed")
+        
+        yield Button("Add a feed", classes="add-feed", id="add-feed")
+        yield Button("Manage feeds", classes="manage-feeds", id="manage-feeds")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         button_id = event.button.id
@@ -42,35 +45,90 @@ class Sidebar(Vertical):
 class FeedDisplay(VerticalScroll):
     selected_feed = reactive(0)
     selected_feed_title = reactive("")
-    _button_counter = 0  # Add counter to ensure unique IDs
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.feed = None
+        self.showing_article = False
 
     def compose(self) -> ComposeResult:
-        yield Static("Welcome to RssTUI!", id="feed-content")
+        yield Static("This is RssTUI", classes="feed-content")
 
     def update_feed(self, feed_index: int, feed_title: str) -> None:
         self.selected_feed = feed_index
         self.selected_feed_title = feed_title
+        self.showing_article = False
 
-        content_widget = self.query_one("#feed-content", Static)
-        content_widget.update(f"Feed: {feed_title}")
+        self._clear_all_dynamic_content()
+        self.call_after_refresh(self._load_feed_content, feed_title)
 
-        for widget in self.query("Button.title-button"):
-            widget.remove()
+    def _load_feed_content(self, feed_title: str) -> None:
+        content_widget = self.query_one(".feed-content", Static)
+        content_widget.update(f"Feed is {feed_title}. Click on any article 2 open it!")
 
         try:
-            feed = get_feed_json(feed_title)
-            if "entries" in feed:
-                for i, entry in enumerate(feed["entries"]):
-                    if "title" in entry:
-                        title = entry["title"]
-                        self._button_counter += 1
-                        self.mount(
-                            Button(
-                                title, id=f"article-button-{self._button_counter}", classes="title-button"
-                            )
-                        )
-        except (KeyError, FileNotFoundError) as e:
-            self.mount(Static(f"Error loading feed: {e}", classes="error"))
+            self.feed = get_feed_json(feed_title)
+            if "entries" in self.feed:
+                self._show_article_list()
+        except Exception as e:
+            self.mount(
+                Static(
+                    f"Well, well, well... WHat do we have here: {e}", classes="error"
+                )
+            )
+
+    def _clear_all_dynamic_content(self) -> None:
+        widgets_to_remove = []
+
+        for child in self.children:
+            if hasattr(child, "id") and child.id:
+                if (
+                    child.id.startswith("article-button-")
+                    or child.id == "back-button"
+                    or hasattr(child, "classes")
+                    and any(
+                        cls in child.classes
+                        for cls in ["article-content", "article-title", "error"]
+                    )
+                ):
+                    widgets_to_remove.append(child)
+
+        for widget in widgets_to_remove:
+            try:
+                widget.remove()
+            except Exception:
+                pass
+
+    def _show_article_list(self) -> None:
+        self.showing_article = False
+        for i, entry in enumerate(self.feed["entries"]):
+            if "title" in entry:
+                self.mount(
+                    Button(
+                        entry["title"],
+                        id=f"article-button-{i}",
+                        classes="title-button",
+                    )
+                )
+
+    def _show_article(self, article_index: int) -> None:
+        self.showing_article = True
+        self._clear_all_dynamic_content()
+
+        article = self.feed["entries"][article_index]
+        self.mount(Button("Take me back", id="back-button", classes="back-button"))
+        self.mount(Static(article["title"], classes="article-title", id="article-title"))
+        self.mount(Static(article["summary"], classes="article-content", id="article-content"))
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        button_id = event.button.id
+
+        if button_id and button_id.startswith("article-button"):
+            article_index = int(button_id.split("-")[-1])
+            self._show_article(article_index)
+        elif button_id == "back-button":
+            self._clear_all_dynamic_content()
+            self.call_after_refresh(self._show_article_list)
 
 
 class RssTUI(App):
@@ -79,12 +137,12 @@ class RssTUI(App):
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
 
     def compose(self) -> ComposeResult:
-        yield Header(show_clock=True, icon="❀")
+        yield Header(show_clock=True, icon="❀", id="header")
         yield Horizontal(
             Sidebar(id="sidebar"),
             FeedDisplay(id="main-area"),
         )
-        yield Footer(show_command_palette=False)
+        yield Footer(show_command_palette=False, id="footer")
 
     def on_sidebar_feed_selected(self, message: Sidebar.FeedSelected) -> None:
         """Handle feed selection messages"""
