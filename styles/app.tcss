@@ -22,9 +22,7 @@
     align: center top;
 }
 
-#feed-display,
-#add-feed-display,
-#manage-display {
+#main-content {
    background: #FF8200;
    color: black;
    border-left: solid black;
@@ -110,3 +108,38 @@ VerticalScroll {
   scrollbar-color-hover: #ffc400ff;
 }
 
+.add-feed-title {
+    border: solid black;
+    text-style: bold;
+}
+
+.feed-name-input, .feed-url-input {
+    # padding: 0;
+    background: transparent;
+    color: black;
+}
+
+.add-feed-button {
+    background: transparent;
+    color: black;
+    border: ascii black;
+}
+
+.manage-feed-row {
+    background: black;
+    height: 4;
+    color: #FF8200; 
+    margin-bottom: 1;
+    padding: 1;
+}
+
+.manage-delete-feed {
+    background: transparent;
+    color: #FF8200;
+    padding: 0;
+    height: 2;
+}
+
+.manage-feed-name {
+    text-style: bold;
+}

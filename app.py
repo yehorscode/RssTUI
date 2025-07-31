@@ -1,5 +1,5 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Header, Static, Button
+from textual.widgets import Header, Static, Button, Input
 from textual.containers import VerticalScroll, Horizontal, Vertical
 from textual.reactive import reactive
 from textual.message import Message
@@ -8,6 +8,8 @@ import json
 
 
 class Sidebar(Vertical):
+
+    feed_data = reactive({})
 
     class FeedSelected(Message):
         def __init__(self, feed_index: int, feed_title: str) -> None:
@@ -27,45 +29,103 @@ class Sidebar(Vertical):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.feed_buttons = []
+        self.load_feeds()
+    
+    def load_feeds(self):
+        """Load feeds from feeds.json"""
         try:
             with open("feeds.json", "r") as f:
                 feeds_dict = json.load(f)
-                self.feed_titles = list(feeds_dict.keys())
+                self.feed_data = feeds_dict
         except FileNotFoundError:
-            self.feed_titles = ["No feeds.json found"]
+            self.feed_data = {"No feeds.json found": ""}
 
     def compose(self) -> ComposeResult:
         yield Static("RSS Feeds", classes="sidebar-title")
-        for i, feed in enumerate(self.feed_titles):
-            self.feed_buttons.append(feed)
-            yield Button(feed, id=f"feed-{i}", classes="feed")
+        
+        for feed in self.feed_data.keys():
+            if feed != "No feeds.json found":
+                self.feed_buttons.append(feed)
+                feed_id = feed.replace(" ", "_").replace("/", "_").replace(".", "_")
+                yield Button(feed, id=f"feed-{feed_id}", classes="feed")
+            else:
+                yield Static(feed, classes="no-feeds-message")
 
-        yield Button("Add a feed", classes="add-feed", id="add-feed")
+        yield Button("Add feed", classes="add-feed", id="add-feed")
         yield Button("Manage feeds", classes="manage-feeds", id="manage-feeds")
+    
+    async def watch_feed_data(self, new_data: dict) -> None:
+        """Called when feed_data changes - rebuild the feed buttons"""
+        try:
+            add_button = self.query_one("#add-feed")
+        except:
+            return
+        
+        current_feeds = list(self.query(".feed"))
+        current_messages = list(self.query(".no-feeds-message"))
+        
+        for widget in current_feeds + current_messages:
+            await widget.remove()
+        
+        self.feed_buttons.clear()
+        
+        for feed in new_data.keys():
+            if feed != "No feeds.json found":
+                self.feed_buttons.append(feed)
+                feed_id = feed.replace(" ", "_").replace("/", "_").replace(".", "_")
+                button = Button(feed, id=f"feed-{feed_id}", classes="feed")
+                self.mount(button, before=add_button)
+            else:
+                message = Static(feed, classes="no-feeds-message")
+                self.mount(message, before=add_button)
+    
+    def refresh_feeds(self):
+        """Refresh the sidebar with updated feeds"""
+        try:
+            with open("feeds.json", "r") as f:
+                feeds_dict = json.load(f)
+        except FileNotFoundError:
+            feeds_dict = {"No feeds.json found": ""}
+        
+        self.feed_data = {}
+        self.feed_data = feeds_dict
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         button_id = event.button.id
         if button_id and button_id.startswith("feed-"):
-            feed_index = int(button_id.split("-")[1])
-            feed_title = self.feed_titles[feed_index]
-            self.post_message(self.FeedSelected(feed_index, feed_title))
+            feed_id = button_id[5:] 
+            feed_title = None
+            for feed in self.feed_data.keys():
+                if feed.replace(" ", "_").replace("/", "_").replace(".", "_") == feed_id:
+                    feed_title = feed
+                    break
+            
+            if feed_title and feed_title in self.feed_data:
+                feed_titles = list(self.feed_data.keys())
+                feed_index = feed_titles.index(feed_title)
+                self.post_message(self.FeedSelected(feed_index, feed_title))
         elif button_id == "add-feed":
             self.post_message(self.ModeSelected("add"))
         elif button_id == "manage-feeds":
             self.post_message(self.ModeSelected("manage"))
 
 
-class FeedDisplay(VerticalScroll):
-    selected_feed = reactive(0)
-    selected_feed_title = reactive("")
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.feed = None
-        self.showing_article = False
-
+class MainContent(VerticalScroll):
+    """The main father and mother of all the content"""
+    
+    class FeedsChanged(Message):
+        """Message sent when feeds are added or deleted"""
+        pass
+    
     def compose(self) -> ComposeResult:
-        yield Static(
+        yield Vertical(id="content-container")
+    
+    def show_welcome(self):
+        """Welcome screen"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        
+        welcome_text = Static(
             """
  ██████╗ ███████╗███████╗████████╗██╗   ██╗██╗
 ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██║   ██║██║
@@ -81,120 +141,115 @@ Made for Summer of Making 2025 \n
 Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
             classes="feed-content",
         )
-        yield Vertical(id="dynamic-content")
-
-    def update_feed(self, feed_index: int, feed_title: str) -> None:
-        self.selected_feed = feed_index
-        self.selected_feed_title = feed_title
-        self.showing_article = False
-
-        self._load_feed_content(feed_title)
-
-    def _load_feed_content(self, feed_title: str) -> None:
-        welcome_widget = self.query_one(".feed-content", Static)
-        welcome_widget.display = False
-
-        dynamic_container = self._get_clean_dynamic_container()
-
+        container.mount(welcome_text)
+    
+    def show_feed(self, feed_title: str):
+        """Show feed's content"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        
         feed_info = Horizontal(
             Static(f"Feed is {feed_title}.", classes="feed-info"),
-            Static(
-                "Click on any article to open it!",
-                classes="feed-instruction",
-            ),
+            Static("Click on any article to open it!", classes="feed-instruction"),
             classes="feed-info-container",
         )
-        dynamic_container.mount(feed_info)
-
+        container.mount(feed_info)
+        
         articles_container = VerticalScroll(classes="articles-list")
-        dynamic_container.mount(articles_container)
-
+        container.mount(articles_container)
+        
         try:
-            self.feed = get_feed_json(feed_title)
-            if "entries" in self.feed:
-                self._show_article_list(articles_container)
-        except Exception as e:
-            articles_container.mount(
-                Static(
-                    f"Well, well, well... What do we have here: {e}", classes="error"
-                )
-            )
-
-    def _get_clean_dynamic_container(self):
-        """Get a clean dynamic container, ensuring it's ready for new content"""
-        try:
-            dynamic_container = self.query_one("#dynamic-content")
-            dynamic_container.remove_children()
-            return dynamic_container
-        except Exception:
-            # If dynamic-content doesn't exist, create it
-            new_container = Vertical(id="dynamic-content")
-            self.mount(new_container)
-            return new_container
-
-    def _show_welcome_screen(self) -> None:
-        """Show the welcome screen and hide any feed content"""
-        welcome_widget = self.query_one(".feed-content", Static)
-        welcome_widget.display = True
-        self._get_clean_dynamic_container()
-
-    def _show_article_list(self, articles_container=None) -> None:
-        self.showing_article = False
-        try:
-            if articles_container is None:
-                articles_container = self.query_one(".articles-list")
-
-            for i, entry in enumerate(self.feed["entries"]):
-                if "title" in entry:
-                    articles_container.mount(
-                        Button(
-                            entry["title"],
-                            id=f"article-button-{i}",
-                            classes="title-button",
+            feed = get_feed_json(feed_title)
+            if "entries" in feed:
+                for i, entry in enumerate(feed["entries"]):
+                    if "title" in entry:
+                        articles_container.mount(
+                            Button(entry["title"], id=f"article-button-{i}", classes="title-button")
                         )
-                    )
         except Exception as e:
-            print(f"Error showing article list: {e}")
-            try:
-                safe_container = self._get_clean_dynamic_container()
-                safe_container.mount(
-                    Static(f"Error loading articles: {e}", classes="error")
-                )
-            except:
-                pass
-
-    def _show_article(self, article_index: int) -> None:
-        self.showing_article = True
-
-        dynamic_container = self._get_clean_dynamic_container()
-
-        article = self.feed["entries"][article_index]
-        dynamic_container.mount(
-            Button("Take me back", id="back-button", classes="back-button")
-        )
-        dynamic_container.mount(
-            Static(article["title"], classes="article-title", id="article-title")
-        )
-        dynamic_container.mount(
-            Static(article["summary"], classes="article-content", id="article-content")
-        )
+            articles_container.mount(Static(f"Error: {e}. Restart the app.", classes="error"))
+    
+    def show_add_feed(self):
+        """Add feeds screen"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        container.mount(Static("Add a feed", classes="add-feed-title"))
+        container.mount(Static("""
+You can try: (reddit feeds only show titles)
+https://www.reddit.com/r/AskReddit/.rss
+"""))
+        container.mount(Input(placeholder="Name 4 feed", id="feed-name-input", classes="feed-name-input", type="text"))
+        container.mount(Input(placeholder="https://onion.com/feed", id="feed-url-input", classes="feed-url-input", type="text"))
+        container.mount(Button("Add!", id="add-feed-button", classes="add-feed-button"))
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
-        button_id = event.button.id
+        """When user submits a new feed or deletes a feed"""
+        if event.button.id == "add-feed-button":
+            feed_name = self.query_one("#feed-name-input").value
+            feed_url = self.query_one("#feed-url-input").value
+            
+            try:
+                with open("feeds.json", "r") as f:
+                    feeds_dict = json.load(f)
+            except FileNotFoundError:
+                feeds_dict = {}
+                
+            feeds_dict[feed_name] = feed_url
+            with open("feeds.json", "w") as f:
+                json.dump(feeds_dict, f, indent=4)
+            
+            self.post_message(self.FeedsChanged())
+            self.show_welcome()
+        
+        elif event.button.id and event.button.id.startswith("manage-delete-feed-"):
+            feed_index = int(event.button.id.split("-")[-1])
+            
+            try:
+                with open("feeds.json", "r") as f:
+                    feeds_dict = json.load(f)
+                
+                feed_names = list(feeds_dict.keys())
+                if 0 <= feed_index < len(feed_names):
+                    feed_to_delete = feed_names[feed_index]
+                    del feeds_dict[feed_to_delete]
+                    
+                    with open("feeds.json", "w") as f:
+                        json.dump(feeds_dict, f, indent=4)
+                    
+                    self.post_message(self.FeedsChanged())
+                    
+                    self.show_manage_feeds()
+                    
+            except FileNotFoundError:
+                pass
 
-        if button_id and button_id.startswith("article-button"):
-            article_index = int(button_id.split("-")[-1])
-            self._show_article(article_index)
-        elif button_id == "back-button":
-            if hasattr(self, "selected_feed_title") and self.selected_feed_title:
-                self._load_feed_content(self.selected_feed_title)
-            else:
-                dynamic_container = self._get_clean_dynamic_container()
-                self._show_article_list()
-
-class AddFeedDisplay(VerticalScroll):
-    def compose(self) -> ComposeResult:
-        yield Static("Add a feed", classes="add-feed-title")
+    def show_manage_feeds(self):
+        """Manage feeds screen"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        container.mount(Static("Manage your feeds", classes="manage-title"))
+        
+        try:
+            with open("feeds.json", "r") as f:
+                feeds_dict = json.load(f)
+        except FileNotFoundError:
+            container.mount(Static("No feeds found. Add some feeds first!", classes="error"))
+            return
+            
+        for i, feed in enumerate(feeds_dict):
+            feed_info = Vertical(
+                Static(feed, classes="manage-feed-name"),
+                Static(feeds_dict[feed], classes="manage-feed-url"),
+                classes="manage-feed-info"
+            )
+            
+            delete_button = Button("Delete", id=f"manage-delete-feed-{i}", classes="manage-delete-feed")
+            
+            container.mount(Horizontal(
+                feed_info,
+                delete_button,
+                classes="manage-feed-row"
+            ))
 
 
 class RssTUI(App):
@@ -206,47 +261,33 @@ class RssTUI(App):
         yield Header(show_clock=True, icon="❀", id="header")
         yield Horizontal(
             Sidebar(id="sidebar"),
-            FeedDisplay(id="feed-display"),
+            MainContent(id="main-content"),
         )
 
+    def on_mount(self) -> None:
+        """Big ass welcome text"""
+        main_content = self.query_one("#main-content", MainContent)
+        main_content.show_welcome()
+
     def on_sidebar_feed_selected(self, message: Sidebar.FeedSelected) -> None:
-        """Handle feed selection messages"""
-        horizontal_container = self.query_one(Horizontal)
-        
-        # Remove any non-FeedDisplay widgets
-        for widget_id in ["add-feed-display", "manage-display"]:
-            try:
-                widget = self.query_one(f"#{widget_id}")
-                widget.remove()
-            except:
-                pass
-        
-        # Get or create FeedDisplay
-        try:
-            feed_display = self.query_one("#feed-display")
-        except:
-            feed_display = FeedDisplay(id="feed-display")
-            horizontal_container.mount(feed_display)
-        
-        feed_display.update_feed(message.feed_index, message.feed_title)
+        """Handles messages for feeds"""
+        # lmao ts is like scratch
+        main_content = self.query_one("#main-content", MainContent)
+        main_content.show_feed(message.feed_title)
 
     def on_sidebar_mode_selected(self, message: Sidebar.ModeSelected) -> None:
-        """Handle mode selection messages"""
-        horizontal_container = self.query_one(Horizontal)
-        
-        # Remove other widgets first
-        for widget_id in ["feed-display", "add-feed-display", "manage-display"]:
-            try:
-                widget = self.query_one(f"#{widget_id}")
-                widget.remove()
-            except:
-                pass
+        """Handles mode selection (sends messages)"""
+        main_content = self.query_one("#main-content", MainContent)
         
         if message.mode == "add":
-            horizontal_container.mount(AddFeedDisplay(id="add-feed-display"))
+            main_content.show_add_feed()
         elif message.mode == "manage":
-            # TODO: Implement proper feed management
-            horizontal_container.mount(FeedDisplay(id="manage-display"))
+            main_content.show_manage_feeds()
+    
+    def on_main_content_feeds_changed(self, message: MainContent.FeedsChanged) -> None:
+        """Handle feeds changed message by refreshing the sidebar"""
+        sidebar = self.query_one("#sidebar", Sidebar)
+        sidebar.refresh_feeds()
 
     def action_toggle_dark(self) -> None:
         self.theme = (
