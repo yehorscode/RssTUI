@@ -40,7 +40,7 @@ A lot of sites use rss! Here are some of the examples!
 
 -   TechCrunch: https://techcrunch.com/feed.xml
 -   NYT Global: https://rss.nytimes.com/services/xml/rss/nyt/World.xml (has feeds for different subpages but not all)
--   Reddit!: All sub-reddits have rss feeds, just add `.rss` to the end of the link like https://www.reddit.com/r/JDVancePics.rss
+-   Reddit!: All sub-reddits have rss feeds, just add `.rss` to the end of the link like https://www.reddit.com/r/JDVancePics.rss UPDATE: Reddit feeds seem to have a really really small limit on rss requests, so they dont work reliably
 -   And other! like https://theverge.com/rss.xml https://xkcd.com/rss.xml
 
 It's pretty cool huh?

@@ -1,4 +1,6 @@
 {
     "TechCrunch": "https://techcrunch.com/feed/",
-    "NYT Global": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    "Engadget": "https://www.engadget.com/rss.xml",
+    "NYT Global": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "Wired": "https://www.wired.com/feed/rss"
 }
