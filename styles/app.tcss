@@ -66,7 +66,7 @@
 
 .feed-info-container {
     margin-bottom: 0;
-    height: 8;
+    height: 10;
 }
 
 .add-feed {
@@ -205,4 +205,25 @@ VerticalScroll {
 
 .article-link {
     
+}
+
+
+# the input
+.article-search {
+    background: transparent;
+}
+# the btn
+.search-btn {
+    border: solid black;
+    background: transparent;
+    color: black;
+    height: 3;
+}
+.search-btn:hover {
+    background: #ffa600ff;
+}
+# and the box
+.search-info-container {
+    padding: 1;
+    border: panel black;
 }

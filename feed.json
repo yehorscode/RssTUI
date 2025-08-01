@@ -40,14 +40,14 @@
             "author_detail": {
                 "name": "The New York Times"
             },
-            "published": "Fri, 01 Aug 2025 15:28:42 +0000",
+            "published": "Fri, 01 Aug 2025 16:34:24 +0000",
             "published_parsed": [
                 2025,
                 8,
                 1,
-                15,
-                28,
-                42,
+                16,
+                34,
+                24,
                 4,
                 213,
                 0
@@ -56,16 +56,16 @@
                 {
                     "height": "1800",
                     "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/08/01/multimedia/01markets-tariffs-promo1020am/01markets-tariffs-reporter-updates-stocks-gwqv-mediumSquareAt3X.jpg",
+                    "url": "https://static01.nyt.com/images/2025/08/01/multimedia/01Tariffs-Market-mwfv/01Tariffs-Market-mwfv-mediumSquareAt3X.jpg",
                     "width": "1800"
                 }
             ],
             "media_credit": [
                 {
-                    "content": "Wolfgang Rattay/Reuters"
+                    "content": "Yuki Iwamura/Associated Press"
                 }
             ],
-            "credit": "Wolfgang Rattay/Reuters"
+            "credit": "Yuki Iwamura/Associated Press"
         },
         {
             "title": "Trump Gives Mexico a Reprieve but Slams Canada With Higher Tariffs",
@@ -410,12 +410,12 @@
             "link": "https://www.nytimes.com/2025/08/01/world/middleeast/witkoff-gaza-aid-trump-us.html",
             "id": "https://www.nytimes.com/2025/08/01/world/middleeast/witkoff-gaza-aid-trump-us.html",
             "guidislink": false,
-            "summary": "Steve Witkoff visited the enclave on Friday amid growing pressure on Israel to ease the hunger crisis. Hamas said the trip would be a \u201cpropaganda show.\u201d",
+            "summary": "Steve Witkoff went to the Palestinian enclave amid growing pressure on Israel to ease a deepening hunger crisis there. Hamas derided the visit as a \u201cpropaganda show.\u201d",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Steve Witkoff visited the enclave on Friday amid growing pressure on Israel to ease the hunger crisis. Hamas said the trip would be a \u201cpropaganda show.\u201d"
+                "value": "Steve Witkoff went to the Palestinian enclave amid growing pressure on Israel to ease a deepening hunger crisis there. Hamas derided the visit as a \u201cpropaganda show.\u201d"
             },
             "authors": [
                 {
@@ -426,14 +426,14 @@
             "author_detail": {
                 "name": "Adam Rasgon"
             },
-            "published": "Fri, 01 Aug 2025 12:14:55 +0000",
+            "published": "Fri, 01 Aug 2025 15:38:16 +0000",
             "published_parsed": [
                 2025,
                 8,
                 1,
-                12,
-                14,
-                55,
+                15,
+                38,
+                16,
                 4,
                 213,
                 0
@@ -1474,6 +1474,127 @@
             ]
         },
         {
+            "title": "Putin Blames Frustration Over Ukraine Talks on \u2018Inflated Expectations\u2019",
+            "title_detail": {
+                "type": "text/plain",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "Putin Blames Frustration Over Ukraine Talks on \u2018Inflated Expectations\u2019"
+            },
+            "links": [
+                {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://www.nytimes.com/2025/08/01/world/europe/trump-putin-ukraine-russia-talks.html"
+                },
+                {
+                    "href": "https://www.nytimes.com/2025/08/01/world/europe/trump-putin-ukraine-russia-talks.html",
+                    "rel": "standout",
+                    "type": "text/html"
+                }
+            ],
+            "link": "https://www.nytimes.com/2025/08/01/world/europe/trump-putin-ukraine-russia-talks.html",
+            "id": "https://www.nytimes.com/2025/08/01/world/europe/trump-putin-ukraine-russia-talks.html",
+            "guidislink": false,
+            "summary": "The Russian president didn\u2019t directly respond to President Trump\u2019s ultimatum that Moscow halt its offensive by the end of next week or face financial penalties.",
+            "summary_detail": {
+                "type": "text/html",
+                "language": null,
+                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                "value": "The Russian president didn\u2019t directly respond to President Trump\u2019s ultimatum that Moscow halt its offensive by the end of next week or face financial penalties."
+            },
+            "authors": [
+                {
+                    "name": "Nataliya Vasilyeva and Paul Sonne"
+                }
+            ],
+            "author": "Nataliya Vasilyeva and Paul Sonne",
+            "author_detail": {
+                "name": "Nataliya Vasilyeva and Paul Sonne"
+            },
+            "published": "Fri, 01 Aug 2025 16:32:09 +0000",
+            "published_parsed": [
+                2025,
+                8,
+                1,
+                16,
+                32,
+                9,
+                4,
+                213,
+                0
+            ],
+            "tags": [
+                {
+                    "term": "Russian Invasion of Ukraine (2022)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "United States International Relations",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Peace Process",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Putin, Vladimir V",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
+                    "label": null
+                },
+                {
+                    "term": "Trump, Donald J",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
+                    "label": null
+                },
+                {
+                    "term": "Kyiv (Ukraine)",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Russia",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
+                    "label": null
+                },
+                {
+                    "term": "Defense and Military Forces",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                },
+                {
+                    "term": "Embargoes and Sanctions",
+                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
+                    "label": null
+                }
+            ],
+            "media_content": [
+                {
+                    "height": "1801",
+                    "medium": "image",
+                    "url": "https://static01.nyt.com/images/2025/08/01/multimedia/00intl-russia-putin-tfcj/00intl-russia-putin-tfcj-mediumSquareAt3X.jpg",
+                    "width": "1800"
+                }
+            ],
+            "media_credit": [
+                {
+                    "content": "David Guttenfelder/The New York Times"
+                }
+            ],
+            "credit": "David Guttenfelder/The New York Times",
+            "content": [
+                {
+                    "type": "text/plain",
+                    "language": null,
+                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    "value": "Ukrainian firefighters in the courtyard of a tuberculosis hospital after a Russian bomb struck its roof in Kharkiv, Ukraine, in July."
+                }
+            ]
+        },
+        {
             "title": "Why Trump\u2019s Tariffs Are Closing Factories in Lesotho",
             "title_detail": {
                 "type": "text/plain",
@@ -1581,12 +1702,12 @@
             "link": "https://www.nytimes.com/2025/08/01/world/europe/derk-sauer-dead.html",
             "id": "https://www.nytimes.com/2025/08/01/world/europe/derk-sauer-dead.html",
             "guidislink": false,
-            "summary": "He was a socialist reporter turned magnate who earned a fortune in the 1990s. He defended press freedoms even after the industry became beleaguered and unprofitable.",
+            "summary": "He earned a media fortune in 1990s Russia with a \u201csex, news and rock \u2019n\u2019 roll\u201d strategy and defended press freedoms after the industry became beleaguered and unprofitable.",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "He was a socialist reporter turned magnate who earned a fortune in the 1990s. He defended press freedoms even after the industry became beleaguered and unprofitable."
+                "value": "He earned a media fortune in 1990s Russia with a \u201csex, news and rock \u2019n\u2019 roll\u201d strategy and defended press freedoms after the industry became beleaguered and unprofitable."
             },
             "authors": [
                 {
@@ -1597,14 +1718,14 @@
             "author_detail": {
                 "name": "Anatoly Kurmanaev and Claire Moses"
             },
-            "published": "Fri, 01 Aug 2025 12:33:01 +0000",
+            "published": "Fri, 01 Aug 2025 15:44:04 +0000",
             "published_parsed": [
                 2025,
                 8,
                 1,
-                12,
-                33,
-                1,
+                15,
+                44,
+                4,
                 4,
                 213,
                 0
@@ -1665,12 +1786,12 @@
             ]
         },
         {
-            "title": "5 Missing After Deadly Mine Collapse in Chile",
+            "title": "1 Dead and 5 Missing After Mine Collapse in Chile",
             "title_detail": {
                 "type": "text/plain",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "5 Missing After Deadly Mine Collapse in Chile"
+                "value": "1 Dead and 5 Missing After Mine Collapse in Chile"
             },
             "links": [
                 {
@@ -1687,30 +1808,30 @@
             "link": "https://www.nytimes.com/2025/08/01/world/americas/chile-mine-collapse.html",
             "id": "https://www.nytimes.com/2025/08/01/world/americas/chile-mine-collapse.html",
             "guidislink": false,
-            "summary": "Chile\u2019s state-owned copper company halted operations at its El Teniente mine after an earthquake. At least one person was killed in the accident.",
+            "summary": "Chile\u2019s state-owned copper company halted operations at its El Teniente mine after an earthquake.",
             "summary_detail": {
                 "type": "text/html",
                 "language": null,
                 "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Chile\u2019s state-owned copper company halted operations at its El Teniente mine after an earthquake. At least one person was killed in the accident."
+                "value": "Chile\u2019s state-owned copper company halted operations at its El Teniente mine after an earthquake."
             },
             "authors": [
                 {
-                    "name": "Francesca Regalado"
+                    "name": "Francesca Regalado and Jonathan Wolfe"
                 }
             ],
-            "author": "Francesca Regalado",
+            "author": "Francesca Regalado and Jonathan Wolfe",
             "author_detail": {
-                "name": "Francesca Regalado"
+                "name": "Francesca Regalado and Jonathan Wolfe"
             },
-            "published": "Fri, 01 Aug 2025 06:42:56 +0000",
+            "published": "Fri, 01 Aug 2025 16:19:57 +0000",
             "published_parsed": [
                 2025,
                 8,
                 1,
-                6,
-                42,
-                56,
+                16,
+                19,
+                57,
                 4,
                 213,
                 0
@@ -6668,147 +6789,6 @@
                     "value": "President Luiz In\u00e1cio Lula da Silva during an interview with The New York Times on Tuesday."
                 }
             ]
-        },
-        {
-            "title": "Brazil\u2019s President Lula Voices Frustration With Trump Amid Tariff Battle",
-            "title_detail": {
-                "type": "text/plain",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Brazil\u2019s President Lula Voices Frustration With Trump Amid Tariff Battle"
-            },
-            "links": [
-                {
-                    "rel": "alternate",
-                    "type": "text/html",
-                    "href": "https://www.nytimes.com/2025/07/30/world/americas/brazil-president-lula-trump-tariffs.html"
-                },
-                {
-                    "href": "https://www.nytimes.com/2025/07/30/world/americas/brazil-president-lula-trump-tariffs.html",
-                    "rel": "standout",
-                    "type": "text/html"
-                }
-            ],
-            "link": "https://www.nytimes.com/2025/07/30/world/americas/brazil-president-lula-trump-tariffs.html",
-            "id": "https://www.nytimes.com/2025/07/30/world/americas/brazil-president-lula-trump-tariffs.html",
-            "guidislink": false,
-            "summary": "Faced with threats of 50 percent tariffs and demands to end a criminal case, President Luiz In\u00e1cio Lula da Silva said he wouldn\u2019t take orders from President Trump.",
-            "summary_detail": {
-                "type": "text/html",
-                "language": null,
-                "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                "value": "Faced with threats of 50 percent tariffs and demands to end a criminal case, President Luiz In\u00e1cio Lula da Silva said he wouldn\u2019t take orders from President Trump."
-            },
-            "authors": [
-                {
-                    "name": "Jack Nicas and Victor Moriyama"
-                }
-            ],
-            "author": "Jack Nicas and Victor Moriyama",
-            "author_detail": {
-                "name": "Jack Nicas and Victor Moriyama"
-            },
-            "published": "Wed, 30 Jul 2025 19:08:59 +0000",
-            "published_parsed": [
-                2025,
-                7,
-                30,
-                19,
-                8,
-                59,
-                2,
-                211,
-                0
-            ],
-            "tags": [
-                {
-                    "term": "Brazil",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_geo",
-                    "label": null
-                },
-                {
-                    "term": "Da Silva, Luiz Inacio Lula",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Moraes, Alexandre de (1968- )",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Supreme Federal Court (Brazil)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_org",
-                    "label": null
-                },
-                {
-                    "term": "Politics and Government",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "United States International Relations",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "International Trade and World Market",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Customs (Tariff)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Embargoes and Sanctions",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Bolsonaro, Jair (1955- )",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Trump, Donald J",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/nyt_per",
-                    "label": null
-                },
-                {
-                    "term": "Democracy (Theory and Philosophy)",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                },
-                {
-                    "term": "Coups D'Etat and Attempted Coups D'Etat",
-                    "scheme": "http://www.nytimes.com/namespaces/keywords/des",
-                    "label": null
-                }
-            ],
-            "media_content": [
-                {
-                    "height": "1801",
-                    "medium": "image",
-                    "url": "https://static01.nyt.com/images/2025/07/30/world/30int-brazil-lula-interview-promo/30int-brazil-lula-interview-mediumSquareAt3X.jpg",
-                    "width": "1800"
-                }
-            ],
-            "media_credit": [
-                {
-                    "content": "Victor Moriyama for The New York Times"
-                }
-            ],
-            "credit": "Victor Moriyama for The New York Times",
-            "content": [
-                {
-                    "type": "text/plain",
-                    "language": null,
-                    "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                    "value": "President Luiz In\u00e1cio Lula da Silva of Brazil during an interview with The New York Times on Tuesday at the Alvorada Palace in Bras\u00edlia."
-                }
-            ]
         }
     ],
     "feed": {
@@ -6847,26 +6827,26 @@
             "base": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
             "value": "Copyright 2025 The New York Times Company"
         },
-        "updated": "Fri, 01 Aug 2025 15:30:20 +0000",
+        "updated": "Fri, 01 Aug 2025 16:35:30 +0000",
         "updated_parsed": [
             2025,
             8,
             1,
-            15,
+            16,
+            35,
             30,
-            20,
             4,
             213,
             0
         ],
-        "published": "Fri, 01 Aug 2025 15:29:31 +0000",
+        "published": "Fri, 01 Aug 2025 16:34:24 +0000",
         "published_parsed": [
             2025,
             8,
             1,
-            15,
-            29,
-            31,
+            16,
+            34,
+            24,
             4,
             213,
             0
@@ -6892,25 +6872,25 @@
     },
     "headers": {
         "connection": "close",
-        "content-length": "19333",
+        "content-length": "19474",
         "access-control-allow-headers": "Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With",
         "access-control-allow-methods": "GET, OPTIONS",
         "access-control-allow-origin": "*",
         "access-control-expose-headers": "Content-Length, X-JSON",
         "cache-control": "public, max-age=300",
         "content-type": "application/xml",
-        "x-envoy-upstream-service-time": "64",
+        "x-envoy-upstream-service-time": "73",
         "server": "envoy",
         "x-envoy-decorator-operation": "du-rss.publishing.nyti.nyt.net:443/*",
         "content-encoding": "gzip",
         "accept-ranges": "bytes",
-        "date": "Fri, 01 Aug 2025 15:31:55 GMT",
+        "date": "Fri, 01 Aug 2025 16:39:31 GMT",
         "via": "1.1 varnish",
-        "age": "95",
-        "x-served-by": "cache-fra-etou8220154-FRA",
+        "age": "241",
+        "x-served-by": "cache-fra-etou8220093-FRA",
         "x-cache": "HIT",
-        "x-cache-hits": "1",
-        "x-timer": "S1754062315.320041,VS0,VE1",
+        "x-cache-hits": "3",
+        "x-timer": "S1754066371.489962,VS0,VE0",
         "vary": "Accept-Encoding",
         "strict-transport-security": "max-age=63072000; preload; includeSubdomains"
     },
