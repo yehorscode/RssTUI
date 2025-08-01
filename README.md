@@ -113,12 +113,29 @@ python3 app.py
 ```
 
 ## Linux Auto Script
+
 If you are so lazy i made a auto script just for you
+
 ```bash
-git clone https://github.com/yehorscode/RssTUI Rsstui && cd Rsstui && sudo chmod +x install.sh && ./install.sh
+git clone https://github.com/yehorscode/RssTUI RssTUI && cd RssTUI && sudo chmod +x install.sh && ./install.sh
 ```
+
 This script automatically copies the repo, installs requirements, tries to activate pyenv tries to activate venv and runs the app!
 
 ## Windows (not fully tested)
 
-So i dont use Windows so i have not tested this fully so i cannot guarantee that this works. I reccomend using WSL!
+Just use WSL, learn how to install and use it: [Microsoft docs link](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+## MacOS
+
+I have never owned ANY mac device, so i do not know how does it know, and how to activate enviroments, sadly i can't reccomend anything. BUT BUT BUT the Linux methods may work. Please try them! Use bash methods
+
+### Running
+
+If u did the script it does anything from u. But if u want to install it then just run
+
+```bash
+python3 app.py
+```
+
+Mind-blowing right?
