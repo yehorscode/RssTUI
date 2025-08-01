@@ -209,7 +209,6 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
 
     async def filter_articles(self, search_text: str):
         container = self.query_one(".articles-list")
-        # Usuń stare widgety z kontenera i z drzewa!
         for child in list(container.children):
             await child.remove()
         if not self.current_feed_data or "entries" not in self.current_feed_data:
