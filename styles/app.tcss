@@ -77,6 +77,14 @@
     margin-top: 2;
 }
 
+.discover-feeds-btn {
+    height: 3;
+    background: transparent;
+    width: 100%;
+    color: black;
+    margin-top: 2;
+}
+
 .manage-feeds {
     height: 3;
     background: transparent;

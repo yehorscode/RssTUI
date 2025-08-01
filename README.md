@@ -139,3 +139,7 @@ python3 app.py
 ```
 
 Mind-blowing right?
+
+
+# Please vote for me!!
+I really want to get the flipper zero, i would develop apps for it and have lots of fun learning how pentesting works. Thanks! If u have issues just find me
