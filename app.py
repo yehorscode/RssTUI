@@ -20,8 +20,7 @@ class Sidebar(Vertical):
         def __init__(self, mode: str) -> None:
             # "add" == adding a feed
             # "manage" == managing feeds
-            # "weather" == weather for current location
-            # "clock" == shows a big ass clock
+            # "discover" == discover feeds
             self.mode = mode
             super().__init__()
 
@@ -52,7 +51,6 @@ class Sidebar(Vertical):
 
         yield Button("Add feed", classes="add-feed", id="add-feed")
         yield Button("Manage feeds", classes="manage-feeds", id="manage-feeds")
-        # TODO: Add discovering feeds, bacsicly managing but the other way around, indstead of deleting make it have like Name, Url, Category and Add Feed btn Kinda cool? Innit mate
         yield Button("Discover feeds", classes="discover-feeds-btn", id="discover-feeds-btn")
     
     async def watch_feed_data(self, new_data: dict) -> None:
@@ -109,6 +107,8 @@ class Sidebar(Vertical):
             self.post_message(self.ModeSelected("add"))
         elif button_id == "manage-feeds":
             self.post_message(self.ModeSelected("manage"))
+        elif button_id == "discover-feeds-btn":
+            self.post_message(self.ModeSelected("discover"))
 
 
 class MainContent(VerticalScroll):
@@ -177,7 +177,10 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
                         )
         except Exception as e:
             articles_container.mount(Static(f"Error: {e}. Restart the app.", classes="error"))
-    
+
+        
+
+
     def show_article(self, article_index: int):
         """Show individual article content"""
         container = self.query_one("#content-container")
@@ -291,6 +294,34 @@ https://www.reddit.com/r/AskReddit/.rss
                     
             except FileNotFoundError:
                 pass
+        
+        elif event.button.id and event.button.id.startswith("discover-add-feed-"):
+            feed_index = int(event.button.id.split("-")[-1])
+            
+            try:
+                with open("discover.json", "r") as f:
+                    discover_dict = json.load(f)
+                
+                with open("feeds.json", "r") as f:
+                    feeds_dict = json.load(f)
+            except FileNotFoundError:
+                feeds_dict = {}
+            
+            feed_names = list(discover_dict.keys())
+            if 0 <= feed_index < len(feed_names):
+                feed_name = feed_names[feed_index]
+                feed_url = discover_dict[feed_name]
+                
+                # Add the feed to feeds.json
+                feeds_dict[feed_name] = feed_url
+                
+                with open("feeds.json", "w") as f:
+                    json.dump(feeds_dict, f, indent=4)
+                
+                self.post_message(self.FeedsChanged())
+                
+                # Stay on discover page to add more feeds if needed
+                self.show_discover_feeds()
 
     def show_manage_feeds(self):
         """Manage feeds screen"""
@@ -320,6 +351,33 @@ https://www.reddit.com/r/AskReddit/.rss
                 classes="manage-feed-row"
             ))
 
+    def show_discover_feeds(self):
+        """Discover feeds screen"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        container.mount(Static("Discover feeds", classes="discover-title"))
+        
+        try:
+            with open("discover.json", "r") as f:
+                discover_dict = json.load(f)
+        except FileNotFoundError:
+            container.mount(Static("No discover.json found. Create one to discover feeds!", classes="error"))
+            return
+            
+        for i, feed in enumerate(discover_dict):
+            feed_info = Vertical(
+                Static(feed, classes="discover-feed-name"),
+                Static(discover_dict[feed], classes="discover-feed-url"),
+                classes="discover-feed-info"
+            )
+            
+            add_button = Button(f"Add {feed}!", id=f"discover-add-feed-{i}", classes="discover-add-feed")
+            
+            container.mount(Horizontal(
+                feed_info,
+                add_button,
+                classes="discover-feed-row"
+            ))
 
 
 
@@ -354,6 +412,8 @@ class RssTUI(App):
             main_content.show_add_feed()
         elif message.mode == "manage":
             main_content.show_manage_feeds()
+        elif message.mode == "discover":
+            main_content.show_discover_feeds()
     
     def on_main_content_feeds_changed(self, message: MainContent.FeedsChanged) -> None:
         """Handle feeds changed message by refreshing the sidebar"""

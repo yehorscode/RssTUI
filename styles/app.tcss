@@ -166,6 +166,27 @@ VerticalScroll {
     text-style: bold;
 }
 
+.discover-feed-info {
+    background: black;
+    height: 4;
+    color: #FF8200; 
+    margin-bottom: 1;
+    padding: 1;
+}
+
+.discover-feed-name {
+    text-style: bold;
+}
+
+.discover-add-feed {
+    color: black;
+    border: none;
+    height: 4;
+    margin-left: 1;
+    color: #FF8200;
+    background: black;
+}
+
 # Article
 
 .article-title{
