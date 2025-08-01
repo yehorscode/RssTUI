@@ -6,7 +6,6 @@ from textual.message import Message
 from get_feed import get_feed_json
 import json
 
-
 class Sidebar(Vertical):
 
     feed_data = reactive({})
@@ -53,6 +52,8 @@ class Sidebar(Vertical):
 
         yield Button("Add feed", classes="add-feed", id="add-feed")
         yield Button("Manage feeds", classes="manage-feeds", id="manage-feeds")
+        # TODO: Add discovering feeds, bacsicly managing but the other way around, indstead of deleting make it have like Name, Url, Category and Add Feed btn Kinda cool? Innit mate
+        yield Button("Discover feeds", classes="discover-feeds-btn", id="discover-feeds-btn")
     
     async def watch_feed_data(self, new_data: dict) -> None:
         """Called when feed_data changes - rebuild the feed buttons"""
@@ -117,6 +118,11 @@ class MainContent(VerticalScroll):
         """Message sent when feeds are added or deleted"""
         pass
     
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.current_feed_data = None
+        self.current_feed_title = None
+    
     def compose(self) -> ComposeResult:
         yield Vertical(id="content-container")
     
@@ -148,6 +154,8 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         container = self.query_one("#content-container")
         container.remove_children()
         
+        self.current_feed_title = feed_title  # Store for back navigation
+        
         feed_info = Horizontal(
             Static(f"Feed is {feed_title}.", classes="feed-info"),
             Static("Click on any article to open it!", classes="feed-instruction"),
@@ -160,6 +168,7 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         
         try:
             feed = get_feed_json(feed_title)
+            self.current_feed_data = feed
             if "entries" in feed:
                 for i, entry in enumerate(feed["entries"]):
                     if "title" in entry:
@@ -169,6 +178,55 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         except Exception as e:
             articles_container.mount(Static(f"Error: {e}. Restart the app.", classes="error"))
     
+    def show_article(self, article_index: int):
+        """Show individual article content"""
+        container = self.query_one("#content-container")
+        container.remove_children()
+        
+        if not self.current_feed_data or "entries" not in self.current_feed_data:
+            container.mount(Static("No article data available", classes="error"))
+            return
+            
+        entries = self.current_feed_data["entries"]
+        if article_index >= len(entries):
+            container.mount(Static("Article not found", classes="error"))
+            return
+            
+        entry = entries[article_index]
+        
+        container.mount(Button("← Back to feed", id="back-to-feed", classes="back-button"))
+        
+        if "title" in entry:
+            container.mount(Static(entry["title"], classes="article-title"))
+        
+        content = ""
+        if "summary" in entry:
+            content = entry["summary"]
+        elif "description" in entry:
+            content = entry["description"]
+        elif "content" in entry and entry["content"]:
+            if isinstance(entry["content"], list) and len(entry["content"]) > 0:
+                content = entry["content"][0].get("value", "")
+            else:
+                content = str(entry["content"])
+        
+        if content:
+            container.mount(Static(content, classes="article-content"))
+        else:
+            container.mount(Static("No content available for this article", classes="no-content"))
+        
+        if "link" in entry:
+            container.mount(Static(f"\nSee full article: {entry['link']}", classes="article-link"))
+
+        metadata_parts = []
+        if "author" in entry:
+            metadata_parts.append(f"\nWritten by: {entry['author']}")
+        if "published" in entry:
+            metadata_parts.append(f"On {entry['published']}")
+        
+        if metadata_parts:
+            container.mount(Static(" | ".join(metadata_parts), classes="article-metadata"))
+
     def show_add_feed(self):
         """Add feeds screen"""
         container = self.query_one("#content-container")
@@ -176,6 +234,7 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         container.mount(Static("Add a feed", classes="add-feed-title"))
         container.mount(Static("""
 You can try: (reddit feeds only show titles)
+https://www.wired.com/feed/rss
 https://www.reddit.com/r/AskReddit/.rss
 """))
         container.mount(Input(placeholder="Name 4 feed", id="feed-name-input", classes="feed-name-input", type="text"))
@@ -200,6 +259,16 @@ https://www.reddit.com/r/AskReddit/.rss
             
             self.post_message(self.FeedsChanged())
             self.show_welcome()
+        
+        elif event.button.id and event.button.id.startswith("article-button-"):
+            article_index = int(event.button.id.split("-")[-1])
+            self.show_article(article_index)
+        
+        elif event.button.id == "back-to-feed":
+            if self.current_feed_title:
+                self.show_feed(self.current_feed_title)
+            else:
+                self.show_welcome()
         
         elif event.button.id and event.button.id.startswith("manage-delete-feed-"):
             feed_index = int(event.button.id.split("-")[-1])
@@ -250,6 +319,8 @@ https://www.reddit.com/r/AskReddit/.rss
                 delete_button,
                 classes="manage-feed-row"
             ))
+
+
 
 
 class RssTUI(App):

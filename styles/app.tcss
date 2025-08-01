@@ -84,6 +84,14 @@
     color: black;
 }
 
+
+.clock-btn {
+    height: 3;
+    background: transparent;
+    width: 100%;
+    color: black;
+}
+
 .back-button {
     background: transparent;
     border: solid black;
@@ -134,12 +142,38 @@ VerticalScroll {
 }
 
 .manage-delete-feed {
-    background: transparent;
-    color: #FF8200;
-    padding: 0;
-    height: 2;
+    color: black;
+    border: none;
+    height: 1;
+    margin-left: 1;
+    background: #FF8200;
+
+}
+
+.manage-delete-feed:hover {
+    background: #ff7a7aff;
 }
 
 .manage-feed-name {
     text-style: bold;
+}
+
+# Article
+
+.article-title{
+    background: white;
+    # color: #FF8200;
+    text-style: bold;
+}
+
+.article-metadata {
+    text-style: italic;
+}
+
+.article-content {
+
+}
+
+.article-link {
+    
 }
