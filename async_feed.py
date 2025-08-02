@@ -5,7 +5,6 @@ import json
 import aiofiles
 from typing import Dict, Any, Optional
 
-
 class AsyncFeedLoader:
     def __init__(self, timeout: int = 10):
         self.timeout = aiohttp.ClientTimeout(total=timeout)

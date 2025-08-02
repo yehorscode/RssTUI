@@ -138,10 +138,12 @@ This script automatically copies the repo, installs requirements, tries to activ
 ## Windows (not fully tested)
 
 Just use WSL, learn how to install and use it: [Microsoft docs link](https://learn.microsoft.com/en-us/windows/wsl/install)
+For using it inside wsl PLEASE use Windows Terminal and not cmd or powershell consoles. Wundows Terminal is a standalone app but it works a lot better then the other ones + looks very cool see [microsoft windows terminal documentation](https://learn.microsoft.com/en-us/windows/terminal/install)
 
 ## MacOS
 
 I have never owned ANY mac device, so i do not know how does it know, and how to activate enviroments, sadly i can't reccomend anything. BUT BUT BUT the Linux methods may work. Please try them! Use bash methods
+In theory mac os and linux both use unix, so installing the app should work right out of the box and maybe even with the auto installer
 
 ### Running
 

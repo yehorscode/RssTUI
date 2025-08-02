@@ -343,7 +343,6 @@ https://www.reddit.com/r/AskReddit/.rss
                 return
             if not feed_name or not feed_url:
                 return
-
             try:
                 feeds_dict = await AsyncFileHandler.load_feeds()
                 feeds_dict[feed_name] = feed_url
