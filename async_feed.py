@@ -18,8 +18,6 @@ class AsyncFeedLoader:
                         raise Exception(f"HTTP {response.status}: {response.reason}")
                     
                     content = await response.text()
-                    # feedparser.parse() jest synchroniczny, ale szybki
-                    # Uruchamiamy go w executor żeby nie blokować
                     loop = asyncio.get_event_loop()
                     feed = await loop.run_in_executor(None, feedparser.parse, content)
                     
