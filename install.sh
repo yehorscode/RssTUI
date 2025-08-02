@@ -61,7 +61,7 @@ echo """
 
 INSTALLED!!! PLEASE RUN THIS:
 
-python3 app.py
+cd RssTUI && python3 app.py
 
 okay???
 """
