@@ -3,6 +3,19 @@
 This is made for Summer of Making 2025! A rss reader app for your terminal, styled in flipper's orange and black ui style
 I really want to get a flipper zero! And im only like 300 shells short!
 
+## Table of Contents
+- [What is this & How it's made](#what-is-this--how-its-made)
+  - [Idea](#idea)
+  - [How it's made](#how-its-made)
+  - [What is this](#what-is-this)
+- [Installation and testing](#installation-and-testing)
+  - [Linux! (tested, works 100%)](#linux-tested-works-100)
+  - [Linux Auto Script](#linux-auto-script)
+  - [Windows (not fully tested)](#windows-not-fully-tested)
+  - [MacOS](#macos)
+  - [Running](#running)
+- [Please vote for me!!](#please-vote-for-me)
+
 ## What is this & How it's made
 
 ### Idea
