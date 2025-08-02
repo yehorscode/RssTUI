@@ -1,5 +1,5 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Header, Static, Button, Input
+from textual.widgets import Header, Static, Button, Input, Footer
 from textual.containers import VerticalScroll, Horizontal, Vertical
 from textual.reactive import reactive
 from textual.message import Message
@@ -458,12 +458,19 @@ class RssTUI(App):
 
     CSS_PATH = "styles/app.tcss"
 
+    BINDINGS = [
+        ("d", "toggle_dark", "Toggle dark mode"),
+        ("q", "quit", "Quit"),
+        ("h", "homepage", "Go to homepage"),
+    ]
+
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True, icon="❀", id="header", time_format="%H:%M:%S")
         yield Horizontal(
             Sidebar(id="sidebar"),
             MainContent(id="main-content"),
         )
+        yield Footer(show_command_palette=False, classes="footer")
 
     def on_mount(self) -> None:
         """Big ass welcome text"""
@@ -494,9 +501,20 @@ class RssTUI(App):
         sidebar.refresh_feeds()
 
     def action_toggle_dark(self) -> None:
-        self.theme = (
-            "textual-dark" if self.theme == "textual-light" else "textual-light"
-        )
+        if "dark" in self.classes:
+            self.remove_class("dark")
+            self.add_class("light")
+        else:
+            self.remove_class("light")
+            self.add_class("dark")
+    
+    def action_homepage(self) -> None:
+        main_content = self.query_one("#main-content", MainContent)
+        main_content.show_welcome()
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.add_class("light")
 
 
 if __name__ == "__main__":

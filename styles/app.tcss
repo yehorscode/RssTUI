@@ -1,229 +1,487 @@
-#main-content {
-    background: $surface;
+.light {
+    #main-content {
+        background: $surface;
+    }
+
+    #main-content Static {
+        background: transparent;
+    }
+
+    #header {
+        background: #FF8200;
+        color: black;
+        border-bottom: solid black;
+        height: 2;
+    }
+
+    #sidebar {
+        dock: left;
+        width: 20;
+        height: 100%;
+        color: white;
+        background: #FF8200;
+        align: center top;
+    }
+
+    #main-content {
+        background: #FF8200;
+        color: black;
+        border-left: solid black;
+        padding: 0 1 0 1;
+    }
+
+    .sidebar-title {
+        text-style: bold;
+        padding: 1;
+        color: black;
+    }
+
+    .feed {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: black;
+    }
+
+    #feed-content {
+        padding: 1;
+        background: #FF8200;
+    }
+
+    .title-button {
+        background: transparent;
+        color: black;
+        border: solid black;
+    }
+
+    .feed-info {
+        border: panel black;
+        padding: 1;
+        width: 20;
+    }
+    .feed-instruction {
+        border: panel black;
+        padding: 1;
+        width: 20;
+    }
+
+    .feed-info-container {
+        margin-bottom: 0;
+        height: 10;
+    }
+
+    .add-feed {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: black;
+        margin-top: 2;
+    }
+
+    .discover-feeds-btn {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: black;
+        margin-top: 2;
+    }
+
+    .manage-feeds {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: black;
+    }
+
+
+    .clock-btn {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: black;
+    }
+
+    .back-button {
+        background: transparent;
+        border: solid black;
+        color: black;
+    }
+
+    .articles-list {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    #dynamic-content {
+        height: 100%;
+    }
+
+    VerticalScroll {
+        scrollbar-size: 1 1;
+        scrollbar-background: black;
+        scrollbar-color: #ffa13dff;
+        scrollbar-corner-color: yellow;
+        scrollbar-background-hover: black;
+        scrollbar-color-hover: #ffc400ff;
+    }
+
+    .add-feed-title {
+        border: solid black;
+        text-style: bold;
+    }
+
+    .feed-name-input, .feed-url-input {
+        # padding: 0;
+        background: transparent;
+        color: black;
+    }
+
+    .add-feed-button {
+        background: transparent;
+        color: black;
+        border: ascii black;
+    }
+
+    .manage-feed-row {
+        background: black;
+        height: 4;
+        color: #FF8200; 
+        margin-bottom: 1;
+        padding: 1;
+    }
+
+    .manage-delete-feed {
+        color: black;
+        border: none;
+        height: 1;
+        margin-left: 1;
+        background: #FF8200;
+
+    }
+
+    .manage-delete-feed:hover {
+        background: #ff7a7aff;
+    }
+
+    .manage-feed-name {
+        text-style: bold;
+    }
+
+    .discover-feed-info {
+        background: black;
+        height: 4;
+        color: #FF8200; 
+        margin-bottom: 1;
+        padding: 1;
+    }
+
+    .discover-feed-name {
+        text-style: bold;
+    }
+
+    .discover-add-feed {
+        color: black;
+        border: none;
+        height: 4;
+        margin-left: 1;
+        color: #FF8200;
+        background: black;
+    }
+
+    # Article
+
+    .article-title{
+        background: white;
+        # color: #FF8200;
+        text-style: bold;
+    }
+
+    .article-metadata {
+        text-style: italic;
+    }
+
+    .article-content {
+
+    }
+
+    .article-link {
+        
+    }
+
+
+    # the input
+    .article-search {
+        background: transparent;
+        border: solid black;
+        # padding: 1;
+        color: black;
+    }
+    # the btn
+    .search-btn {
+        border: solid black;
+        background: transparent;
+        color: black;
+        height: 3;
+    }
+    .search-btn:hover {
+        background: #ffa600ff;
+    }
+    # and the box
+    .search-info-container {
+        padding: 1;
+        border: panel black;
+    }
+
+    .footer {
+        background: black;
+        color: white;
+    }
 }
 
-#main-content Static {
-    background: transparent;
-}
+.dark {
+    #main-content {
+        background: $surface;
+    }
 
-#header {
-    background: #FF8200;
-    color: black;
-    border-bottom: solid black;
-    height: 2;
-}
+    #main-content Static {
+        background: transparent;
+    }
 
-#sidebar {
-    dock: left;
-    width: 20;
-    height: 100%;
-    color: white;
-    background: #FF8200;
-    align: center top;
-}
+    #header {
+        background: black;
+        color: #FF8200;
+        border-bottom: solid #FF8200;
+        height: 2;
+    }
 
-#main-content {
-   background: #FF8200;
-   color: black;
-   border-left: solid black;
-   padding: 0 1 0 1;
-}
+    #sidebar {
+        dock: left;
+        width: 20;
+        height: 100%;
+        color: #FF8200;
+        background: black;
+        align: center top;
+    }
 
-.sidebar-title {
-    text-style: bold;
-    padding: 1;
-    color: black;
-}
+    #main-content {
+        background: black;
+        color: #FF8200;
+        border-left: solid #FF8200;
+        padding: 0 1 0 1;
+    }
 
-.feed {
-    height: 3;
-    background: transparent;
-    width: 100%;
-    color: black;
-}
+    .sidebar-title {
+        text-style: bold;
+        padding: 1;
+        color: #FF8200;
+    }
 
-#feed-content {
-    padding: 1;
-    background: #FF8200;
-}
+    .feed {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: #FF8200;
+    }
 
-.title-button {
-    background: transparent;
-    color: black;
-    border: solid black;
-}
+    #feed-content {
+        padding: 1;
+        background: #FF8200;
+    }
 
-.feed-info {
-    border: panel black;
-    padding: 1;
-    width: 20;
-}
-.feed-instruction {
-    border: panel black;
-    padding: 1;
-    width: 20;
-}
+    .title-button {
+        background: transparent;
+        color: #FF8200;
+        border: solid #FF8200;
+    }
 
-.feed-info-container {
-    margin-bottom: 0;
-    height: 10;
-}
+    .feed-info {
+        border: panel #FF8200;
+        padding: 1;
+        width: 20;
+    }
 
-.add-feed {
-    height: 3;
-    background: transparent;
-    width: 100%;
-    color: black;
-    margin-top: 2;
-}
+    .feed-instruction {
+        border: panel #FF8200;
+        padding: 1;
+        width: 20;
+    }
 
-.discover-feeds-btn {
-    height: 3;
-    background: transparent;
-    width: 100%;
-    color: black;
-    margin-top: 2;
-}
+    .feed-info-container {
+        margin-bottom: 0;
+        height: 10;
+    }
 
-.manage-feeds {
-    height: 3;
-    background: transparent;
-    width: 100%;
-    color: black;
-}
+    .add-feed {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: #FF8200;
+        margin-top: 2;
+    }
 
+    .discover-feeds-btn {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: #FF8200;
+        margin-top: 2;
+    }
 
-.clock-btn {
-    height: 3;
-    background: transparent;
-    width: 100%;
-    color: black;
-}
+    .manage-feeds {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: #FF8200;
+    }
 
-.back-button {
-    background: transparent;
-    border: solid black;
-    color: black;
-}
+    .clock-btn {
+        height: 3;
+        background: transparent;
+        width: 100%;
+        color: #FF8200;
+    }
 
-.articles-list {
-    height: 100%;
-    overflow-y: auto;
-}
+    .back-button {
+        background: transparent;
+        border: solid #FF8200;
+        color: #FF8200;
+    }
 
-#dynamic-content {
-    height: 100%;
-}
+    .articles-list {
+        height: 100%;
+        overflow-y: auto;
+    }
 
-VerticalScroll {
-  scrollbar-size: 1 1;
-  scrollbar-background: black;
-  scrollbar-color: #ffa13dff;
-  scrollbar-corner-color: yellow;
-  scrollbar-background-hover: black;
-  scrollbar-color-hover: #ffc400ff;
-}
+    #dynamic-content {
+        height: 100%;
+    }
 
-.add-feed-title {
-    border: solid black;
-    text-style: bold;
-}
+    VerticalScroll {
+        scrollbar-size: 1 1;
+        scrollbar-background: #FF8200;
+        scrollbar-color: black;
+        scrollbar-corner-color: gray;
+        scrollbar-background-hover: #FF8200;
+        scrollbar-color-hover: #ffc400ff;
+    }
 
-.feed-name-input, .feed-url-input {
-    # padding: 0;
-    background: transparent;
-    color: black;
-}
+    .add-feed-title {
+        border: solid #FF8200;
+        text-style: bold;
+    }
 
-.add-feed-button {
-    background: transparent;
-    color: black;
-    border: ascii black;
-}
+    .feed-name-input, .feed-url-input {
+        color: #FF8200;
+        background: transparent;
+        border: tall #FF8200;
+    }
 
-.manage-feed-row {
-    background: black;
-    height: 4;
-    color: #FF8200; 
-    margin-bottom: 1;
-    padding: 1;
-}
+    .add-feed-button {
+        background: transparent;
+        color: #FF8200;
+        border: ascii #FF8200;
+    }
 
-.manage-delete-feed {
-    color: black;
-    border: none;
-    height: 1;
-    margin-left: 1;
-    background: #FF8200;
+    .manage-feed-row {
+        background: #FF8200;
+        height: 4;
+        color: black;
+        margin-bottom: 1;
+        padding: 1;
+    }
 
-}
+    .manage-delete-feed {
+        color: #FF8200;
+        border: none;
+        height: 1;
+        margin-left: 1;
+        background: black;
+    }
 
-.manage-delete-feed:hover {
-    background: #ff7a7aff;
-}
+    .manage-delete-feed:hover {
+        background: #ff7a7aff;
+    }
 
-.manage-feed-name {
-    text-style: bold;
-}
+    .manage-feed-name {
+        text-style: bold;
+    }
 
-.discover-feed-info {
-    background: black;
-    height: 4;
-    color: #FF8200; 
-    margin-bottom: 1;
-    padding: 1;
-}
+    .discover-feed-info {
+        background: #FF8200;
+        height: 4;
+        color: black;
+        margin-bottom: 1;
+        padding: 1;
+    }
 
-.discover-feed-name {
-    text-style: bold;
-}
+    .discover-feed-name {
+        text-style: bold;
+    }
 
-.discover-add-feed {
-    color: black;
-    border: none;
-    height: 4;
-    margin-left: 1;
-    color: #FF8200;
-    background: black;
-}
+    .discover-add-feed {
+        color: #FF8200;
+        border: none;
+        height: 4;
+        margin-left: 1;
+        color: black;
+        background: #FF8200;
+    }
 
-# Article
+    # Article
 
-.article-title{
-    background: white;
-    # color: #FF8200;
-    text-style: bold;
-}
+    .article-title {
+        background: white;
+        color: #FF8200;
+        text-style: bold;
+    }
 
-.article-metadata {
-    text-style: italic;
-}
+    .article-metadata {
+        text-style: italic;
+    }
 
-.article-content {
+    .article-content{
 
-}
+    }
 
-.article-link {
-    
-}
+    .article-link {
 
+    }
 
-# the input
-.article-search {
-    background: transparent;
-}
-# the btn
-.search-btn {
-    border: solid black;
-    background: transparent;
-    color: black;
-    height: 3;
-}
-.search-btn:hover {
-    background: #ffa600ff;
-}
-# and the box
-.search-info-container {
-    padding: 1;
-    border: panel black;
+    # the input
+    .article-search {
+        background: transparent;
+        border: solid #FF8200;
+        # padding: 1;
+        color: #FF8200;
+    }
+    # .article-search > .input--placeholder {
+    #     color: #CC6600;
+    # }
+    # the btn
+    .search-btn {
+        border: solid #FF8200;
+        background: transparent;
+        color: #FF8200;
+        height: 3;
+    }
+    .search-btn:hover {
+        background: #5f3100ff;
+    }
+    # and the box
+    .search-info-container {
+        padding: 1;
+        border: panel #FF8200;
+    }
+
+    .footer {
+        background: #FF8200;
+        color: black;
+    }
+    FooterKey .footer-key--description {
+        color: black !important;
+    }
+
+    FooterKey .footer-key--key {
+        color: #633300ff !important;
+    }
 }
