@@ -61,7 +61,7 @@ echo """
 
 INSTALLED!!! PLEASE RUN THIS:
 
-cd RssTUI && python3 app.py
+cd RssTUI && source venv/bin/activate && python3 app.py
 
 okay???
 """
