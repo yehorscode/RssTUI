@@ -37,7 +37,7 @@ Firts let's go throught the basics: **What Is RSS**?
 RSS - [ereses]:
 Really
 Simple
-Syncication
+Syndication
 -or-
 RDF
 Site
@@ -66,7 +66,7 @@ Actually it's kinda very easy to do, so it won't take much time
 
 ## Linux! (tested, works 100%)
 
-The app was written on Linux Mint. Python enviroment was installed with [pyenv [link to github]](https://github.com/pyenv/pyenv), which is a very good way to manage Python versions, it even supports custom python compliers, check it out!!!
+The app was written on Linux Mint. Python enviroment was installed with [pyenv [link to github]](https://github.com/pyenv/pyenv), which is a very good way to manage Python versions, it even supports custom python compilers, check it out!!!
 
 Alright Here is how:
 First clone the repo onto your computer
