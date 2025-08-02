@@ -128,7 +128,7 @@ python3 app.py
 If you are so lazy i made a auto script just for you
 
 ```bash
-git clone https://github.com/yehorscode/RssTUI RssTUI && cd RssTUI && sudo chmod +x install.sh && ./install.sh
+curl -fsSL https://raw.githubusercontent.com/yehorscode/RssTUI/refs/heads/main/install.sh | bash
 ```
 
 This script automatically copies the repo, installs requirements, tries to activate pyenv tries to activate venv and runs the app!
