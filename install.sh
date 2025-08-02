@@ -3,8 +3,8 @@
 set -e
 
 echo "Cloning repository..."
-git clone https://github.com/yehorscode/RssTUI ssrui
-cd ssrui
+git clone https://github.com/yehorscode/RssTUI RssTUI
+cd RssTUI
 
 echo """
 
