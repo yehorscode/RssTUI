@@ -1,9 +1,3 @@
-██████╗ ███████╗███████╗████████╗██╗   ██╗██╗
-██╔══██╗██╔════╝██╔════╝╚══██╔══╝██║   ██║██║
-██████╔╝███████╗███████╗   ██║   ██║   ██║██║
-██╔══██╗╚════██║╚════██║   ██║   ██║   ██║██║
-██║  ██║███████║███████║   ██║   ╚██████╔╝██║
-╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝
 # RssTUI - RSS protocol inside your terminal
 This is made for Summer of Making 2025! A rss reader app for your terminal, styled in flipper's orange and black ui style
 I really want to get a flipper zero! And im only like 300 shells short!
