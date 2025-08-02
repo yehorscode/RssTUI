@@ -55,5 +55,13 @@ fi
 echo "Installing requirements..."
 pip install -r requirements.txt
 
-echo "Starting application..."
+echo """
+
+
+
+INSTALLED!!! PLEASE RUN THIS:
+
 python3 app.py
+
+okay???
+"""
