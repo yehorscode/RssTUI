@@ -3,7 +3,8 @@ from textual.widgets import Header, Static, Button, Input, Footer
 from textual.containers import VerticalScroll, Horizontal, Vertical
 from textual.reactive import reactive
 from textual.message import Message
-from get_feed import get_feed_json
+from async_feed import AsyncFeedLoader, AsyncFileHandler
+from typing import Dict, Any
 import json
 
 
@@ -24,20 +25,21 @@ class Sidebar(Vertical):
             # "discover" == discover feeds
             self.mode = mode
             super().__init__()
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.feed_buttons = []
-        self.load_feeds()
 
-    def load_feeds(self):
+    async def on_mount(self) -> None:
+        """Load feeds when sidebar is mounted"""
+        await self.load_feeds_async()
+
+    async def load_feeds_async(self):
         """Load feeds from feeds.json"""
         try:
-            with open("feeds.json", "r") as f:
-                feeds_dict = json.load(f)
-                self.feed_data = feeds_dict
-        except FileNotFoundError:
-            self.feed_data = {"No feeds.json found": ""}
+            feeds_dict = await AsyncFileHandler.load_feeds()
+            self.feed_data = feeds_dict if feeds_dict else {"No feeds.json found": ""}
+        except Exception as e:
+            self.feed_data = {f"Error loading feeds: {e}": ""}
 
     def compose(self) -> ComposeResult:
         yield Static("RSS Feeds", classes="sidebar-title")
@@ -81,16 +83,9 @@ class Sidebar(Vertical):
                 message = Static(feed, classes="no-feeds-message")
                 self.mount(message, before=add_button)
 
-    def refresh_feeds(self):
+    async def refresh_feeds(self):
         """Refresh the sidebar with updated feeds"""
-        try:
-            with open("feeds.json", "r") as f:
-                feeds_dict = json.load(f)
-        except FileNotFoundError:
-            feeds_dict = {"No feeds.json found": ""}
-
-        self.feed_data = {}
-        self.feed_data = feeds_dict
+        await self.load_feeds_async()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         button_id = event.button.id
@@ -129,6 +124,19 @@ class MainContent(VerticalScroll):
         super().__init__(**kwargs)
         self.current_feed_data = None
         self.current_feed_title = None
+        self.feed_loader = AsyncFeedLoader()
+
+    async def load_feeds_async(self, feed_title: str) -> Dict[str, Any]:
+        """Load specific feed data asynchronously"""
+        feeds_dict = await AsyncFileHandler.load_feeds()
+        
+        if feed_title not in feeds_dict:
+            raise Exception(f"Feed '{feed_title}' not found in feeds.json")
+        
+        feed_url = feeds_dict[feed_title]
+        feed_data = await self.feed_loader.load_feed(feed_url)
+        
+        return feed_data
 
     def compose(self) -> ComposeResult:
         yield Vertical(id="content-container")
@@ -156,7 +164,7 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         )
         container.mount(welcome_text)
 
-    def show_feed(self, feed_title: str):
+    async def show_feed(self, feed_title: str):
         """Show feed's content"""
         container = self.query_one("#content-container")
         container.remove_children()
@@ -184,8 +192,13 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
         articles_container = VerticalScroll(classes="articles-list")
         container.mount(articles_container)
 
+        loading_widget = Static("Loading feed... Tip: It's async", classes="loading")
+        articles_container.mount(loading_widget)
+
         try:
-            feed = get_feed_json(feed_title)
+            feed = await self.load_feeds_async(feed_title)
+            await loading_widget.remove()
+            
             self.current_feed_data = feed
             if "entries" in feed:
                 for i, entry in enumerate(feed["entries"]):
@@ -197,9 +210,14 @@ Styled like a flipper zero because i really want one! (pls vote 4 me :-)""",
                                 classes="title-button",
                             )
                         )
+            else:
+                articles_container.mount(
+                    Static("No articles found in this feed.", classes="error")
+                )
         except Exception as e:
+            await loading_widget.remove()
             articles_container.mount(
-                Static(f"Error: {e}. Restart the app.", classes="error")
+                Static(f"Error: {e}", classes="error")
             )
 
     async def on_input_changed(self, event: Input.Changed) -> None:
@@ -313,24 +331,25 @@ https://www.reddit.com/r/AskReddit/.rss
         )
         container.mount(Button("Add!", id="add-feed-button", classes="add-feed-button"))
 
-    def on_button_pressed(self, event: Button.Pressed) -> None:
+    async def on_button_pressed(self, event: Button.Pressed) -> None:
         """When user submits a new feed or deletes a feed"""
         if event.button.id == "add-feed-button":
             feed_name = self.query_one("#feed-name-input").value
             feed_url = self.query_one("#feed-url-input").value
 
+            if not feed_name or not feed_url:
+                return
+
             try:
-                with open("feeds.json", "r") as f:
-                    feeds_dict = json.load(f)
-            except FileNotFoundError:
-                feeds_dict = {}
-
-            feeds_dict[feed_name] = feed_url
-            with open("feeds.json", "w") as f:
-                json.dump(feeds_dict, f, indent=4)
-
-            self.post_message(self.FeedsChanged())
-            self.show_welcome()
+                feeds_dict = await AsyncFileHandler.load_feeds()
+                feeds_dict[feed_name] = feed_url
+                await AsyncFileHandler.save_feeds(feeds_dict)
+                
+                self.post_message(self.FeedsChanged())
+                self.show_welcome()
+            except Exception as e:
+                container = self.query_one("#content-container")
+                container.mount(Static(f"Error saving feed: {e}", classes="error"))
 
         elif event.button.id and event.button.id.startswith("article-button-"):
             article_index = int(event.button.id.split("-")[-1])
@@ -338,7 +357,7 @@ https://www.reddit.com/r/AskReddit/.rss
 
         elif event.button.id == "back-to-feed":
             if self.current_feed_title:
-                self.show_feed(self.current_feed_title)
+                await self.show_feed(self.current_feed_title)
             else:
                 self.show_welcome()
 
@@ -346,49 +365,36 @@ https://www.reddit.com/r/AskReddit/.rss
             feed_index = int(event.button.id.split("-")[-1])
 
             try:
-                with open("feeds.json", "r") as f:
-                    feeds_dict = json.load(f)
-
+                feeds_dict = await AsyncFileHandler.load_feeds()
                 feed_names = list(feeds_dict.keys())
                 if 0 <= feed_index < len(feed_names):
                     feed_to_delete = feed_names[feed_index]
                     del feeds_dict[feed_to_delete]
-
-                    with open("feeds.json", "w") as f:
-                        json.dump(feeds_dict, f, indent=4)
-
+                    await AsyncFileHandler.save_feeds(feeds_dict)
                     self.post_message(self.FeedsChanged())
-
                     self.show_manage_feeds()
-
-            except FileNotFoundError:
-                pass
+            except Exception as e:
+                container = self.query_one("#content-container")
+                container.mount(Static(f"Error deleting feed: {e}", classes="error"))
 
         elif event.button.id and event.button.id.startswith("discover-add-feed-"):
             feed_index = int(event.button.id.split("-")[-1])
 
             try:
-                with open("discover.json", "r") as f:
-                    discover_dict = json.load(f)
-
-                with open("feeds.json", "r") as f:
-                    feeds_dict = json.load(f)
-            except FileNotFoundError:
-                feeds_dict = {}
-
-            feed_names = list(discover_dict.keys())
-            if 0 <= feed_index < len(feed_names):
-                feed_name = feed_names[feed_index]
-                feed_url = discover_dict[feed_name]
-
-                feeds_dict[feed_name] = feed_url
-
-                with open("feeds.json", "w") as f:
-                    json.dump(feeds_dict, f, indent=4)
-
-                self.post_message(self.FeedsChanged())
-
-                self.show_discover_feeds()
+                discover_dict = await AsyncFileHandler.load_discover_feeds()
+                feeds_dict = await AsyncFileHandler.load_feeds()
+                
+                feed_names = list(discover_dict.keys())
+                if 0 <= feed_index < len(feed_names):
+                    feed_name = feed_names[feed_index]
+                    feed_url = discover_dict[feed_name]
+                    feeds_dict[feed_name] = feed_url
+                    await AsyncFileHandler.save_feeds(feeds_dict)
+                    self.post_message(self.FeedsChanged())
+                    self.show_discover_feeds()
+            except Exception as e:
+                container = self.query_one("#content-container")
+                container.mount(Static(f"Error adding feed: {e}", classes="error"))
 
     def show_manage_feeds(self):
         """Manage feeds screen"""
@@ -477,12 +483,12 @@ class RssTUI(App):
         main_content = self.query_one("#main-content", MainContent)
         main_content.show_welcome()
 
-    def on_sidebar_feed_selected(self, message: Sidebar.FeedSelected) -> None:
+    async def on_sidebar_feed_selected(self, message: Sidebar.FeedSelected) -> None:
         """Handles messages for feeds"""
         # lmao ts is like scratch
         # i used to make lots of message sends inside scratch
         main_content = self.query_one("#main-content", MainContent)
-        main_content.show_feed(message.feed_title)
+        await main_content.show_feed(message.feed_title)
 
     def on_sidebar_mode_selected(self, message: Sidebar.ModeSelected) -> None:
         """Handles mode selection (sends messages)"""
@@ -495,10 +501,10 @@ class RssTUI(App):
         elif message.mode == "discover":
             main_content.show_discover_feeds()
 
-    def on_main_content_feeds_changed(self, message: MainContent.FeedsChanged) -> None:
+    async def on_main_content_feeds_changed(self, message: MainContent.FeedsChanged) -> None:
         """Handle feeds changed message by refreshing the sidebar"""
         sidebar = self.query_one("#sidebar", Sidebar)
-        sidebar.refresh_feeds()
+        await sidebar.refresh_feeds()
 
     def action_toggle_dark(self) -> None:
         if "dark" in self.classes:

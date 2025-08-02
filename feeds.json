@@ -1,8 +1,5 @@
 {
     "Engadget": "https://www.engadget.com/rss.xml",
     "The Verge": "https://www.theverge.com/rss.xml",
-    "Wired": "https://www.wired.com/feed/rss",
-    "Talking Points": "https://talkingpointsmemo.com/feed/",
-    "TechCrunch": "https://techcrunch.com/feed/",
-    "NYT Global": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    "Wired": "https://www.wired.com/feed/rss"
 }
