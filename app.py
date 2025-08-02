@@ -337,6 +337,10 @@ https://www.reddit.com/r/AskReddit/.rss
             feed_name = self.query_one("#feed-name-input").value
             feed_url = self.query_one("#feed-url-input").value
 
+            if not str(feed_url).startswith("http://") or not str(feed_url).startswith("https://"):
+                container = self.query_one("#content-container")
+                container.mount(Static("Feed URL must start with http:// or https://", classes="error"))
+                return
             if not feed_name or not feed_url:
                 return
 
